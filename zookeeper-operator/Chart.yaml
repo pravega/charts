@@ -1,0 +1,16 @@
+name: zookeeper-operator
+version: 0.0.1
+appVersion: 2.6.0
+description: |
+  Zookeeper operator deploys a custom resource for a zookeeper cluster, and a
+  pod to provision and scale zookeeper clusters.
+keywords:
+- zookeeper
+- storage
+home: https://github.com/pravega/charts/blob/master/zookeeper-operator
+icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+sources:
+- https://github.com/pravega/charts/blob/master/zookeeper-operator
+maintainers:
+- name: spiegela
+engine: gotpl

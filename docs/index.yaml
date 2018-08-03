@@ -1,0 +1,45 @@
+apiVersion: v1
+entries:
+  pravega-operator:
+  - appVersion: 2.6.0
+    created: 2018-08-02T21:36:57.824405658-05:00
+    description: |
+      pravega operator deploys a custom resource for a pravega cluster, and a
+      pod to provision and scale pravega clusters.
+    digest: 82c423d77a6c3bf5ccdbbb828e5ed0e5ede20d160d1e938be35ee952197e0470
+    engine: gotpl
+    home: https://github.com/pravega/charts/blob/master/pravega-operator
+    icon: https://avatars3.githubusercontent.com/u/25698199
+    keywords:
+    - pravega
+    - storage
+    maintainers:
+    - name: spiegela
+    name: pravega-operator
+    sources:
+    - https://github.com/pravega/charts/blob/master/pravega-operator
+    urls:
+    - pravega-operator-0.0.1.tgz
+    version: 0.0.1
+  zookeeper-operator:
+  - appVersion: 2.6.0
+    created: 2018-08-02T21:36:57.824704205-05:00
+    description: |
+      Zookeeper operator deploys a custom resource for a zookeeper cluster, and a
+      pod to provision and scale zookeeper clusters.
+    digest: 3c98c98676b4c5156347c2356af429b8ad7c8df64d0900bc02d577f67f407313
+    engine: gotpl
+    home: https://github.com/pravega/charts/blob/master/zookeeper-operator
+    icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+    keywords:
+    - zookeeper
+    - storage
+    maintainers:
+    - name: spiegela
+    name: zookeeper-operator
+    sources:
+    - https://github.com/pravega/charts/blob/master/zookeeper-operator
+    urls:
+    - zookeeper-operator-0.0.1.tgz
+    version: 0.0.1
+generated: 2018-08-02T21:36:57.823773078-05:00

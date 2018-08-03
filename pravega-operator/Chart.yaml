@@ -1,0 +1,16 @@
+name: pravega-operator
+version: 0.0.1
+appVersion: 2.6.0
+description: |
+  pravega operator deploys a custom resource for a pravega cluster, and a
+  pod to provision and scale pravega clusters.
+keywords:
+- pravega
+- storage
+home: https://github.com/pravega/charts/blob/master/pravega-operator
+icon: https://avatars3.githubusercontent.com/u/25698199
+sources:
+- https://github.com/pravega/charts/blob/master/pravega-operator
+maintainers:
+- name: spiegela
+engine: gotpl
