@@ -26,12 +26,31 @@ If you're running on GKE, be sure to enable cluster role bindings:
 $ kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=<your.google.cloud.email@example.org>
 ```
 
+## Customising values
+
+Default values can be overridden when installing the operator by creating a yaml file and passing in with the `--values` option.
+
+By default the chart will tell the Zookeeper Operator to watch all namespaces and installs a ClusterRole RBAC definition.  If a specific namespace is required, this should be passed using the `watchNamespace` value.
+
+> **Note**: Kubernetes resources to create the Zookeeper Cluster will be created in the same namespace as the ZookeeperCluster resource
+
+_my-values.yaml:_
+```
+watchNamespace: "my-namespace"
+
+```
+
 ## Installing the Chart
 
-To install the chart with the release name `my-release`:
 
+Install the chart with the release name `my-release` use one of these options:
 ```bash
+# Use the default settings and watch ALL namespaces
 $ helm install --name my-release zookeeper-operator
+
+# Or pass in the my-values.yaml file
+$ helm install --name my-release --values values.yaml zookeeper-operator
+
 ```
 > **Tip**: List all releases using `helm list`
 
