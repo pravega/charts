@@ -1,3 +1,4 @@
+{{if eq .Values.watchNamespace ""}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,8 +24,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
+              value: "{{ .Values.watchNamespace }}"
             - name: OPERATOR_NAME
               value: "zookeeper-operator"
+{{end}}

@@ -23,8 +23,6 @@ spec:
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
+              value: "{{ .Values.watchNamespace }}"
             - name: OPERATOR_NAME
               value: "pravega-operator"
