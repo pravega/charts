@@ -3,7 +3,7 @@ entries:
   bookkeeper:
   - apiVersion: v2
     appVersion: 0.7.0
-    created: "2020-07-27T09:02:33.742439578+05:30"
+    created: "2020-07-27T20:36:55.292252203+05:30"
     description: Bookkeeper Helm chart for Kubernetes
     digest: b196787cebccf63e2b375d3bf679d57d6ef78623c8bc6fda24606fe18becffb4
     home: https://github.com/apache/bookkeeper
@@ -18,7 +18,7 @@ entries:
   bookkeeper-operator:
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2020-07-27T09:02:33.743383226+05:30"
+    created: "2020-07-27T20:36:55.294541506+05:30"
     description: Bookkeeper Operator Helm chart for Kubernetes
     digest: 6df780b9c662dfa0e2fe9e7fc3950e1f39b33cc8f9a7bd35c43dde58a1ebae94
     home: https://github.com/pravega/bookkeeper-operator
@@ -30,10 +30,40 @@ entries:
     urls:
     - bookkeeper-operator-0.1.2.tgz
     version: 0.1.2
+  pravega:
+  - apiVersion: v2
+    appVersion: 0.7.0
+    created: "2020-07-27T20:36:55.295847514+05:30"
+    description: Pravega Helm chart for Kubernetes
+    digest: 8239076f2e01da3eed45ac1100c305d715ce4e7f30f21a438afa0c6871b026a6
+    home: https://github.com/pravega/pravega
+    icon: https://avatars3.githubusercontent.com/u/25698199
+    keywords:
+    - pravega
+    - storage
+    name: pravega
+    urls:
+    - pravega-0.7.0.tgz
+    version: 0.7.0
+  pravega-operator:
+  - apiVersion: v2
+    appVersion: 0.5.1
+    created: "2020-07-27T20:36:55.296412283+05:30"
+    description: Pravega Operator Helm chart for Kubernetes
+    digest: ddd85f38ec04c7f26e89a680ddb6f4e2d155e59277d7b3f169aba5cddbdf7f81
+    home: https://github.com/pravega/pravega-operator
+    icon: https://avatars3.githubusercontent.com/u/25698199
+    keywords:
+    - pravega
+    - storage
+    name: pravega-operator
+    urls:
+    - pravega-operator-0.5.1.tgz
+    version: 0.5.1
   zookeeper:
   - apiVersion: v2
     appVersion: 0.2.8
-    created: "2020-07-27T09:02:33.744198247+05:30"
+    created: "2020-07-27T20:36:55.29680887+05:30"
     description: Zookeeper Helm chart for Kubernetes
     digest: bcd52e17671f00261f75f5e59ded3c7acb8d15927cb807d0a31ca50f97862336
     home: https://github.com/apache/zookeeper
@@ -48,7 +78,7 @@ entries:
   zookeeper-operator:
   - apiVersion: v2
     appVersion: 0.2.8
-    created: "2020-07-27T09:02:33.747353764+05:30"
+    created: "2020-07-27T20:36:55.297222795+05:30"
     description: Zookeeper Operator Helm chart for Kubernetes
     digest: ac12693c10c0f2cc975be38f2ff7e75fe44f342ea29cca6f8b0da5b6bbc0467f
     home: https://github.com/pravega/zookeeper-operator
@@ -60,4 +90,4 @@ entries:
     urls:
     - zookeeper-operator-0.2.8.tgz
     version: 0.2.8
-generated: "2020-07-27T09:02:33.740875005+05:30"
+generated: "2020-07-27T20:36:55.29052888+05:30"
