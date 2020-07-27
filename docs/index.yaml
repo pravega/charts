@@ -1,0 +1,63 @@
+apiVersion: v1
+entries:
+  bookkeeper:
+  - apiVersion: v2
+    appVersion: 0.7.0
+    created: "2020-07-27T09:02:33.742439578+05:30"
+    description: Bookkeeper Helm chart for Kubernetes
+    digest: b196787cebccf63e2b375d3bf679d57d6ef78623c8bc6fda24606fe18becffb4
+    home: https://github.com/apache/bookkeeper
+    icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
+    keywords:
+    - log storage
+    - stream storage
+    name: bookkeeper
+    urls:
+    - bookkeeper-0.7.0.tgz
+    version: 0.7.0
+  bookkeeper-operator:
+  - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2020-07-27T09:02:33.743383226+05:30"
+    description: Bookkeeper Operator Helm chart for Kubernetes
+    digest: 6df780b9c662dfa0e2fe9e7fc3950e1f39b33cc8f9a7bd35c43dde58a1ebae94
+    home: https://github.com/pravega/bookkeeper-operator
+    icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
+    keywords:
+    - log storage
+    - stream storage
+    name: bookkeeper-operator
+    urls:
+    - bookkeeper-operator-0.1.2.tgz
+    version: 0.1.2
+  zookeeper:
+  - apiVersion: v2
+    appVersion: 0.2.8
+    created: "2020-07-27T09:02:33.744198247+05:30"
+    description: Zookeeper Helm chart for Kubernetes
+    digest: bcd52e17671f00261f75f5e59ded3c7acb8d15927cb807d0a31ca50f97862336
+    home: https://github.com/apache/zookeeper
+    icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+    keywords:
+    - zookeeper
+    - storage
+    name: zookeeper
+    urls:
+    - zookeeper-0.2.8.tgz
+    version: 0.2.8
+  zookeeper-operator:
+  - apiVersion: v2
+    appVersion: 0.2.8
+    created: "2020-07-27T09:02:33.747353764+05:30"
+    description: Zookeeper Operator Helm chart for Kubernetes
+    digest: ac12693c10c0f2cc975be38f2ff7e75fe44f342ea29cca6f8b0da5b6bbc0467f
+    home: https://github.com/pravega/zookeeper-operator
+    icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+    keywords:
+    - zookeeper
+    - storage
+    name: zookeeper-operator
+    urls:
+    - zookeeper-operator-0.2.8.tgz
+    version: 0.2.8
+generated: "2020-07-27T09:02:33.740875005+05:30"
