@@ -37,9 +37,9 @@ Before installing the pravega operator, you would need to install [cert-manager]
 
 You would also need to setup a [Long-Term Storage](https://github.com/pravega/pravega-operator#set-up-tier-2-storage) (or Tier 2).
 
-Finally install the pravega operator and a pravega-cluster
+Finally install the pravega operator and a pravega cluster
 ```
-helm install pravega-operator pravega/pravega-operator
-helm install pravega pravega/pravega --set webhookCert.crt=<tls.crt> --set webhookCert.certName=<cert-name> --set webhookCert.secretName=<secret-name>
+helm install pravega-operator pravega/pravega-operator --set webhookCert.crt=<tls.crt> --set webhookCert.generate=false --set webhookCert.certName=<cert-name> --set webhookCert.secretName=<secret-name>
+helm install pravega pravega/pravega
 ```
 > Note: The values *tls.crt*, *cert-name* and *secret-name* will be obtained from the certificate that you have installed earlier.
