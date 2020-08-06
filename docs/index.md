@@ -9,7 +9,7 @@ This GitHub repository contains the source for the packaged and versioned charts
 - Zookeeper
 - Schema Registry
 
-The purpose of this repository is to provide a place for maintaining the official Pravega Charts.
+The purpose of this repository is to provide a place to maintain the official Pravega Charts.
 
 To add the Pravega charts repository to your Helm repos, use the following command
 ```
