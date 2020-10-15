@@ -14,6 +14,7 @@ The purpose of this repository is to provide a place to maintain the official Pr
 To add the Pravega charts repository to your Helm repos, use the following command
 ```
 helm repo add pravega https://charts.pravega.io
+helm repo update
 ```
 
 # Deploying Pravega using charts
@@ -39,7 +40,7 @@ You would also need to setup a [Long-Term Storage](https://github.com/pravega/pr
 
 Finally install the pravega operator and a pravega cluster
 ```
-helm install pravega-operator pravega/pravega-operator --set webhookCert.crt=<tls.crt> --set webhookCert.generate=false --set webhookCert.certName=<cert-name> --set webhookCert.secretName=<secret-name>
+helm install pravega-operator pravega/pravega-operator --set webhookCert.certName=[CERT_NAME] --set webhookCert.secretName=[SECRET_NAME]
 helm install pravega pravega/pravega
 ```
-> Note: The values *tls.crt*, *cert-name* and *secret-name* will be obtained from the certificate that you have installed earlier.
+> Note: Here [CERT_NAME] is the name of the certificate and [SECRET_NAME] is the name of the secret created by the certificate that was installed in the previous step.

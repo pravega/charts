@@ -3,9 +3,9 @@ entries:
   bookkeeper:
   - apiVersion: v2
     appVersion: 0.7.1
-    created: "2020-08-28T20:24:44.388882375+05:30"
+    created: "2020-10-15T17:26:15.871794655+05:30"
     description: Bookkeeper Helm chart for Kubernetes
-    digest: 12f53719744d502150c3b96d4d4c5e120200b4a1b55e9cbf9dc995908c3b21eb
+    digest: 92cab823757b2c6851716c6c0ae50c4b7b085237ab335bc1b7c3dd129f1faf44
     home: https://github.com/apache/bookkeeper
     icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
     keywords:
@@ -17,9 +17,9 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 0.7.0
-    created: "2020-08-28T20:24:44.388382795+05:30"
+    created: "2020-10-15T17:26:15.871025738+05:30"
     description: Bookkeeper Helm chart for Kubernetes
-    digest: b18b801859280178ccf31eacf3418ce75eeb3a6f97f844bc268b9d451fe9c126
+    digest: ceaf05a0614a35103cf86e26b7967ee8f09c73128923ae509fc7c044cc386de4
     home: https://github.com/apache/bookkeeper
     icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
     keywords:
@@ -31,9 +31,9 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 0.6.2
-    created: "2020-08-28T20:24:44.387760985+05:30"
+    created: "2020-10-15T17:26:15.870267191+05:30"
     description: Bookkeeper Helm chart for Kubernetes
-    digest: 704aece69b340fa33fe8487e8acd491e4428e0a49a54fbbcc1f318cc33f17c60
+    digest: 8eb39f204425a1d23bda3689966ca39fab3760e6c98dc37574af2c2624400a85
     home: https://github.com/apache/bookkeeper
     icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
     keywords:
@@ -45,9 +45,9 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 0.6.1
-    created: "2020-08-28T20:24:44.386573259+05:30"
+    created: "2020-10-15T17:26:15.86798104+05:30"
     description: Bookkeeper Helm chart for Kubernetes
-    digest: 78db83862f0c61a8344e0bd0b4012664f2935e1ee65a0af20e2770509bc6e66e
+    digest: 67ea40b41648e96f3cb1ccf4c60cadec8786d112a6dbe19f3780448c1b082a31
     home: https://github.com/apache/bookkeeper
     icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
     keywords:
@@ -59,9 +59,9 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 0.6.0
-    created: "2020-08-28T20:24:44.385352349+05:30"
+    created: "2020-10-15T17:26:15.867105348+05:30"
     description: Bookkeeper Helm chart for Kubernetes
-    digest: a834fbdc19a2959649cc0d6d05506876a2dd6a9afe6062ef8e845875c13539c9
+    digest: e8e1c55a8b83224c0f3140cb82c63c64964e4e774b470b0918772e2897c5b2c1
     home: https://github.com/apache/bookkeeper
     icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
     keywords:
@@ -73,9 +73,9 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.5.1
-    created: "2020-08-28T20:24:44.384067236+05:30"
+    created: "2020-10-15T17:26:15.839288086+05:30"
     description: Bookkeeper Helm chart for Kubernetes
-    digest: 4e1bc9bc04758e16e99d2aa1fee0e1cede650582fc5b145c8edc982a7d48856b
+    digest: 4cbb9194a6deb19bb47b62fc4963416c2574aab864a18c29e7abe52fc6313bd2
     home: https://github.com/apache/bookkeeper
     icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
     keywords:
@@ -87,9 +87,9 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 0.5.0
-    created: "2020-08-28T20:24:44.382432598+05:30"
+    created: "2020-10-15T17:26:15.838661533+05:30"
     description: Bookkeeper Helm chart for Kubernetes
-    digest: bf8e936c1a537762956c073987b1c4760e45d943cb60d27d1628a66b835f0840
+    digest: cec0496bff7faf60d07c47751ecd8aee25b62693ada41ff37dbcc1f52f73b9e4
     home: https://github.com/apache/bookkeeper
     icon: https://bookkeeper.apache.org/images/bookkeeper_logo_blk.png
     keywords:
@@ -102,7 +102,7 @@ entries:
   bookkeeper-operator:
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2020-08-28T20:24:44.390013976+05:30"
+    created: "2020-10-15T17:26:15.872488862+05:30"
     description: Bookkeeper Operator Helm chart for Kubernetes
     digest: 6df780b9c662dfa0e2fe9e7fc3950e1f39b33cc8f9a7bd35c43dde58a1ebae94
     home: https://github.com/pravega/bookkeeper-operator
@@ -117,9 +117,9 @@ entries:
   pravega:
   - apiVersion: v2
     appVersion: 0.8.0
-    created: "2020-08-28T20:24:44.399281896+05:30"
+    created: "2020-10-15T17:26:15.880603771+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: 2d5e93b236e2f820ee7fdda975f3184378ba513a2d7a5fd0d01b9949115bd68b
+    digest: 5b9e5c92df5ea339d431ce7e55f35af058c6ce4a1e22edd1c6a9f82b7f0c128c
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -131,9 +131,9 @@ entries:
     version: 0.8.0
   - apiVersion: v2
     appVersion: 0.7.1
-    created: "2020-08-28T20:24:44.398097992+05:30"
+    created: "2020-10-15T17:26:15.879300874+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: 40f7f3ce4afdc14a79e9897186d2d602dcb88ebde2c31cf261edc28c0eebec0b
+    digest: def5244aa05f2e8f3505d7f496f0a6f3c7a759e4b20caee0ed49015bc1432c0c
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -145,9 +145,9 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 0.7.0
-    created: "2020-08-28T20:24:44.396897461+05:30"
+    created: "2020-10-15T17:26:15.878267913+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: c466e1c01a2af8a66a8c0cd4e49181758075a336cf31b714ea93d1166fdbcc24
+    digest: a60a2571e1984f172594c5f7c68b54f9e7069e5b4468ef873c51fe696b00a745
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -159,9 +159,9 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 0.6.2
-    created: "2020-08-28T20:24:44.395998941+05:30"
+    created: "2020-10-15T17:26:15.877411583+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: d8153cd6b2a743fc3abf93da4dd827eae0d455a7b250bbea2561d562aef3689f
+    digest: 6b9f01848cb048abf1c88585bae245091f4c350f6601a37850fc5fde82664575
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -173,9 +173,9 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 0.6.1
-    created: "2020-08-28T20:24:44.393525324+05:30"
+    created: "2020-10-15T17:26:15.876556273+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: e0bedb290e022bcb2d020305adb03b07ab52c5963776fb877f086fe9dce81c70
+    digest: 4242fcdb9ea5903eb18a7b2e33ac5ecc48208d05400bc5b528accf82502dfe29
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -187,9 +187,9 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 0.6.0
-    created: "2020-08-28T20:24:44.392696889+05:30"
+    created: "2020-10-15T17:26:15.875615105+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: 53287cca3998780d9b9e775dcc2c0bf553973fb9c3adcd0a4bc7a9b18dfa3078
+    digest: d2d3912639a46339704ee3943af0f6f5b02f1287c504e111baeadc3e999b5d50
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -201,9 +201,9 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.5.1
-    created: "2020-08-28T20:24:44.391828985+05:30"
+    created: "2020-10-15T17:26:15.874630491+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: d8d9fe0a27758c83e76ebd779533241442e1fd46eea161d5dfc28c198fa29525
+    digest: c4206c1f66a4e192ec25e2dbed029a05b738dfbcc51bed17483aa50b9b1db042
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -215,9 +215,9 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 0.5.0
-    created: "2020-08-28T20:24:44.390822741+05:30"
+    created: "2020-10-15T17:26:15.873484198+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: aeb2e1d36f2a3b256f34905355df0f3a30b2b35beef0fe589f7b018090af1273
+    digest: 96f2f7be154ef69c3279d4263adda25a83eb4bce4e2f195924692f2dc73e8b6f
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -230,9 +230,9 @@ entries:
   pravega-bk:
   - apiVersion: v2
     appVersion: 0.7.1
-    created: "2020-08-28T20:24:44.404946305+05:30"
+    created: "2020-10-15T17:26:15.88806755+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: a5f8ffd49ac1c835c0c77821bec3025b12e048fe68be6afa82c9a1f5eb4abc91
+    digest: 60e627298504077d9c7f56fe125fa6d4a37a38d587bd8b26487f59609ca719c4
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -244,9 +244,9 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 0.7.0
-    created: "2020-08-28T20:24:44.404236578+05:30"
+    created: "2020-10-15T17:26:15.887423466+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: ad4585a83906b56363e2881521169a65d2e36b33cc0d7b7afeb3a033b13847c7
+    digest: db2c97c87b0d1903f19ea133b4377a7dc5b21588c59ea6af7c360c0733a49431
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -258,9 +258,9 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 0.6.2
-    created: "2020-08-28T20:24:44.403479559+05:30"
+    created: "2020-10-15T17:26:15.886696911+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: 6880a6181399cbf3b2d7bc5b6c807ff8dd8139d9ca2875efa044ded49479bfa4
+    digest: a4548ded31bd4773ec813f29beef72dbced02d8bceb28d50616ba6d6fe3dd669
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -272,9 +272,9 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 0.6.1
-    created: "2020-08-28T20:24:44.402556811+05:30"
+    created: "2020-10-15T17:26:15.885874401+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: 38c2cf8fb068dc48624ec3a0f4f555e4d1c6eb548aa5232a0e0c466986e9205e
+    digest: 7e6a654a0fcf18856c2cc78d67106196b8215ebcb4b442f44874493c44872329
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -286,9 +286,9 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 0.6.0
-    created: "2020-08-28T20:24:44.40181285+05:30"
+    created: "2020-10-15T17:26:15.885033807+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: b0663f94d25f9c1f973053b19db64c71beac36f40b70eafd04a28f84aee4b5e0
+    digest: f45a6868d8504bd316dd6bd3a534e93f064679216ce2da4ce43f587a31093938
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -300,9 +300,9 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.5.1
-    created: "2020-08-28T20:24:44.401045724+05:30"
+    created: "2020-10-15T17:26:15.884382436+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: aa0a66dd48c5a38649f96d61ad0ea5713884c3e316665f2762076ca2dbbf1748
+    digest: eaaabfd77781ff68b3c247f87b73953f11c330c820006a3f19e3b0ff30edb60d
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -314,9 +314,9 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 0.5.0
-    created: "2020-08-28T20:24:44.40037595+05:30"
+    created: "2020-10-15T17:26:15.883480612+05:30"
     description: Pravega Helm chart for Kubernetes
-    digest: 9866b90fb6abc9ee97b74b410f135f0d5961edaf0bda6751df4dd1ef7c9cbf37
+    digest: 1f43c1f167fc0b97fe139032c9dd3ff690a64d57178673f4b0bdb6f7f826ebc5
     home: https://github.com/pravega/pravega
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -329,9 +329,9 @@ entries:
   pravega-operator:
   - apiVersion: v2
     appVersion: 0.5.1
-    created: "2020-08-28T20:24:44.407861662+05:30"
+    created: "2020-10-15T17:26:15.890034277+05:30"
     description: Pravega Operator Helm chart for Kubernetes
-    digest: ddd85f38ec04c7f26e89a680ddb6f4e2d155e59277d7b3f169aba5cddbdf7f81
+    digest: e0ae835346520825153a8898b6e288a51a3cc89f27dc111225ee3e612a0c6b8b
     home: https://github.com/pravega/pravega-operator
     icon: https://avatars3.githubusercontent.com/u/25698199
     keywords:
@@ -342,8 +342,22 @@ entries:
     - pravega-operator-0.5.1.tgz
     version: 0.5.1
   - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2020-10-15T17:26:15.889508494+05:30"
+    description: Pravega Operator Helm chart for Kubernetes
+    digest: 684701da95e1fa64822bb9d1a92c983d7b50f3c0ced04fa9dbecd661a1e4558f
+    home: https://github.com/pravega/pravega-operator
+    icon: https://avatars3.githubusercontent.com/u/25698199
+    keywords:
+    - pravega
+    - storage
+    name: pravega-operator
+    urls:
+    - pravega-operator-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 0.4.5
-    created: "2020-08-28T20:24:44.406499119+05:30"
+    created: "2020-10-15T17:26:15.888578014+05:30"
     description: Pravega Operator Helm chart for Kubernetes
     digest: 7d6f1fe68ce362cf2be40909abe9d6d413d75f58489d6c993da13f8df8ef97b3
     home: https://github.com/pravega/pravega-operator
@@ -358,9 +372,9 @@ entries:
   zookeeper:
   - apiVersion: v2
     appVersion: 0.2.8
-    created: "2020-08-28T20:24:44.408989599+05:30"
+    created: "2020-10-15T17:26:15.890511927+05:30"
     description: Zookeeper Helm chart for Kubernetes
-    digest: bcd52e17671f00261f75f5e59ded3c7acb8d15927cb807d0a31ca50f97862336
+    digest: bbb3d133f3f544f49f703338d274acc6853ea8b2414f2633f764fc78b7fb91f6
     home: https://github.com/apache/zookeeper
     icon: https://zookeeper.apache.org/images/zookeeper_small.gif
     keywords:
@@ -373,9 +387,9 @@ entries:
   zookeeper-operator:
   - apiVersion: v2
     appVersion: 0.2.8
-    created: "2020-08-28T20:24:44.411997715+05:30"
+    created: "2020-10-15T17:26:15.890885552+05:30"
     description: Zookeeper Operator Helm chart for Kubernetes
-    digest: ac12693c10c0f2cc975be38f2ff7e75fe44f342ea29cca6f8b0da5b6bbc0467f
+    digest: 724a98e1c4c0ec23e300d22b7c12194bba23615faa703133f4918f7cf261f1ae
     home: https://github.com/pravega/zookeeper-operator
     icon: https://zookeeper.apache.org/images/zookeeper_small.gif
     keywords:
@@ -385,4 +399,4 @@ entries:
     urls:
     - zookeeper-operator-0.2.8.tgz
     version: 0.2.8
-generated: "2020-08-28T20:24:44.38052224+05:30"
+generated: "2020-10-15T17:26:15.837627869+05:30"
