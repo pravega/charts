@@ -21,20 +21,20 @@ $ helm install [RELEASE_NAME] pravega/bookkeeper-operator --version=[VERSION] --
 where:
 
 - **[RELEASE_NAME]** is the release name for the bookkeeper-operator chart.
-- **[VERSION]** can be any stable release version for bookkeeper-operator from 0.1.3 onwards.
+- **[VERSION]** can be any stable chart version for bookkeeper-operator from 0.1.3 onwards.
 - **[CERT_NAME]** is the name of the certificate created as a prerequisite
 - **[SECRET_NAME]** is the name of the secret created by the above certificate
 
-This command deploys a pravega-operator on the Kubernetes cluster in its default configuration. The [configuration](#operator-configuration) section lists the parameters that can be configured during installation.
+This command deploys a bookkeeper-operator on the Kubernetes cluster in its default configuration. The [configuration](#operator-configuration) section lists the parameters that can be configured during installation.
 
->Note: If we provide [RELEASE_NAME] same as chart name, deployment name will be same as release-name. But if we are providing a different name for release(other than bookkeeper-operator in this case), deployment name will be [RELEASE_NAME]-[chart-name]. However, deployment name can be overridden by providing --set  fullnameOverride=[DEPLOYMENT_NAME]` along with helm install command
+> Note: If we provide [RELEASE_NAME] same as chart name, deployment name will be same as release-name. But if we are providing a different name for release (other than bookkeeper-operator in this case), deployment name will be [RELEASE_NAME]-[chart-name]. However, deployment name can be overridden by providing `--set  fullnameOverride=[DEPLOYMENT_NAME]` along with helm install command
 
 
->Note: If the bookkeeper-operator version is 0.1.2, webhookCert.certName and webhookCert.secretName should not be set. Also in this case, cert-manager and the certificate/issuer do not need to be deployed as prerequisites.
+> Note: If the bookkeeper-operator version is 0.1.2, webhookCert.certName and webhookCert.secretName should not be set. Also in this case, cert-manager and the certificate/issuer do not need to be deployed as prerequisites.
 
 ## Upgrading Bookkeeper-Operator
 
-For upgrading bookkeeper-operator, please refer [upgrade guide](../../doc/operator-upgrade.md)
+For upgrading bookkeeper-operator, please refer [upgrade guide](https://github.com/pravega/bookkeeper-operator/blob/master/doc/operator-upgrade.md)
 
 ## Uninstalling  Bookkeeper-Operator
 

@@ -18,5 +18,6 @@ _(Steps to verify that the changes are effective)_
 
 _(Place an '[x]' (no spaces) in all applicable fields)_
 
-- [ ] Chart version bumped
-- [ ] PR title starts with the name of the chart (e.g. `[bookkeeper-operator]`)
+- [ ] PR title starts with the name of the chart followed by the issue number (e.g. `[bookkeeper-operator] Issue XX: "Description"`)
+- [ ] Verified output of helm lint
+- [ ] Changes have been tested manually

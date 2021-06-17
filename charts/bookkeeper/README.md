@@ -4,10 +4,10 @@ Here, we briefly describe how to [install](#installing-bookkeeper-cluster)/[upda
 
 ## Prerequisites
 
-  - Kubernetes 1.15+ with Beta APIs
-  - Helm 3+
-  - An existing Apache Zookeeper 3.6.1 cluster. This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator)
-  - Bookkeeper Operator. Please refer [this](../../charts/bookkeeper-operator/README.md)
+- Kubernetes 1.15+ with Beta APIs
+- Helm 3+
+- An existing Apache Zookeeper 3.6.1 cluster. This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator)
+- Bookkeeper Operator. Please refer [this](../bookkeeper-operator/README.md)
 
 ## Installing Bookkeeper Cluster
 
@@ -20,15 +20,15 @@ $ helm install [RELEASE_NAME] pravega/bookkeeper --version=[VERSION] --set zooke
 ```
 where:
 - **[RELEASE_NAME]** is the release name for the bookkeeper chart
-- **[VERSION]** can be any stable release version for bookkeeper from 0.5.0 onwards
+- **[VERSION]** can be any stable chart version for bookkeeper from 0.5.0 onwards
 - **[ZOOKEEPER_HOST]** is the zookeeper service endpoint of your zookeeper cluster deployment (default value of this field is `zookeeper-client:2181`)
 - **[NAMESPACE]** is the namespace in which you wish to deploy the bookkeeper cluster (default value for this field is `default`) The bookkeeper cluster must be installed in the same namespace as the zookeeper cluster.
 
->Note: If we provide [RELEASE_NAME] same as chart name, cluster name will be same as release-name. But if we are providing a different name for release(other than bookkeeper in this case), cluster name will be [RELEASE_NAME]-[chart-name]. However, cluster name can be overridden by providing `--set  fullnameOverride=[CLUSTER_NAME]` along with helm install command.
+> Note: If we provide [RELEASE_NAME] same as chart name, cluster name will be same as release-name. But if we are providing a different name for release(other than bookkeeper in this case), cluster name will be [RELEASE_NAME]-[chart-name]. However, cluster name can be overridden by providing `--set  fullnameOverride=[CLUSTER_NAME]` along with helm install command.
 
 This command deploys bookkeeper on the Kubernetes cluster in its default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
->Note: If the operator version is 0.1.3 or below and bookkeeper version is 0.9.0 or above, you would need to set the JVM options as shown below.
+> Note: If the operator version is 0.1.3 or below and bookkeeper version is 0.9.0 or above, you would need to set the JVM options as shown below.
 ```
 helm install [RELEASE_NAME] pravega/bookkeeper --version=[VERSION] --set zookeeperUri=[ZOOKEEPER_HOST] --set pravegaClusterName=[PRAVEGA_CLUSTER_NAME] -n [NAMESPACE] --set 'jvmOptions.extraOpts={-XX:+UseContainerSupport,-XX:+IgnoreUnrecognizedVMOptions}'
 ```
@@ -74,12 +74,12 @@ For updating the bookkeeper cluster, use the following command
 ```
 helm upgrade [RELEASE_NAME]  --version=[VERSION]  --set replicas=5
 ```
- we can also update other configurable parameters at run time. For changing options `minorCompactionInterval` to `1900` use the below command.
+we can also update other configurable parameters at run time. For changing options `minorCompactionInterval` to `1900` use the below command.
 
- ```
-  helm upgrade bookkeeper charts/bookkeeper --set-string options."minorCompactionInterval=1900"
-  ```
-Please refer [upgrade](../../doc/upgrade-cluster.md) for upgrading cluster versions.
+```
+helm upgrade bookkeeper charts/bookkeeper --set-string options."minorCompactionInterval=1900"
+```
+Please refer [upgrade](https://github.com/pravega/bookkeeper-operator/blob/master/doc/upgrade-cluster.md) for upgrading cluster versions.
 
 ## Uninstalling the Bookkeeper cluster
 
@@ -134,7 +134,7 @@ Type:    Error
 Events:  <none>
 ```
 
->In case the operator fails to delete the zookeeper metadata, the user is expected to manually delete the metadata from zookeeper prior to reinstall.
+> In case the operator fails to delete the zookeeper metadata, the user is expected to manually delete the metadata from zookeeper prior to reinstall.
 
 ## Configuration
 

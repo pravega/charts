@@ -30,33 +30,13 @@ helm search repo pravega -l
 ## Deploying Pravega using charts
 
 We now show you step by step how to deploy Pravega, which involves the deployment of Zookeeper, Bookkeeper and Pravega (as well as their respective Operators).
-Follow the following steps to quickly setup a running Pravega cluster.
 
-First install the zookeeper operator and a zookeeper cluster
-```
-helm install zookeeper-operator pravega/zookeeper-operator
-helm install zookeeper pravega/zookeeper
-```
+Follow the commands provided in the links that each of the following steps guide you to, in the same order they have been mentioned, to quickly setup a running Pravega cluster.
 
-Before installing the bookkeeper operator, you would need to install an issuer and a certificate (can be either self-signed or CA signed). Refer to [this](https://github.com/pravega/bookkeeper-operator/blob/master/deploy/certificate.yaml) manifest to create a self-signed issuer and certificate.
-
-Then install the bookkeeper operator and a bookkeeper cluster
-```
-helm install bookkeeper-operator pravega/bookkeeper-operator --set webhookCert.certName=[CERT_NAME] --set webhookCert.secretName=[SECRET_NAME]
-helm install bookkeeper pravega/bookkeeper
-```
-
-Just like in case of the bookkeeper operator, you would need to install another issuer and certificate before installing the pravega-operator. Refer to [this](https://github.com/pravega/pravega-operator/blob/master/deploy/certificate.yaml) manifest to create a self-signed issuer and certificate.
-
-You would also need to setup a [Long-Term Storage](https://github.com/pravega/pravega-operator#set-up-tier-2-storage) (or Tier 2) before you proceed with the next step.
-
-Finally install the pravega operator and a pravega cluster using the following commands
-```
-helm install pravega-operator pravega/pravega-operator --set webhookCert.certName=[CERT_NAME] --set webhookCert.secretName=[SECRET_NAME]
-helm install pravega pravega/pravega
-```
-
-> Note: Here [CERT_NAME] is the name of the certificate and [SECRET_NAME] is the name of the secret created by the certificate that was installed in the previous step.
+- First install the zookeeper operator and a zookeeper cluster.
+- Once that is done, you would need to install the [bookkeeper operator](charts/bookkeeper-operator/README.md#installing-bookkeeper-operator) and a [bookkeeper cluster](charts/bookkeeper/README.md#installing-bookkeeper-cluster).
+- You then need to setup a [Long-Term Storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md#use-nfs-as-longtermstorage) (or Tier 2) before moving to the next step.
+- Finally install the pravega operator and a pravega cluster.
 
 ## Contributing
 We thrive to build a welcoming and open community for anyone who wants to use the pravega helm charts or contribute to it. [Here](https://github.com/pravega/charts/wiki/Contributing) we describe how to contribute to the helm charts. Contact the developers and community on [slack](https://pravega-io.slack.com/) ([signup](https://pravega-slack-invite.herokuapp.com/)) if you need any help.
