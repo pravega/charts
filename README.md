@@ -11,12 +11,6 @@ This GitHub repository contains the source code for the helm charts for each of 
 
 It also contains the published charts for each of these components within the [gh-pages](https://github.com/pravega/charts/tree/gh-pages) branch.
 
-## Prerequisites
-
-- Kubernetes 1.15+
-- Helm 3.2.1+
-- [Cert-Manager](https://cert-manager.io/docs/installation/kubernetes/) v0.15.0+
-
 To add the Pravega charts repository to your Helm repos, use the following command
 ```
 helm repo add pravega https://charts.pravega.io
