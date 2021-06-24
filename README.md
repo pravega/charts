@@ -28,7 +28,7 @@ We now show you step by step how to deploy Pravega, which involves the deploymen
 Follow the commands provided in the links that each of the following steps guide you to, in the same order they have been mentioned, to quickly setup a running Pravega cluster.
 
 - First install the zookeeper operator and a zookeeper cluster.
-- Once that is done, you would need to install the [bookkeeper operator](charts/bookkeeper-operator/README.md#installing-bookkeeper-operator) and a [bookkeeper cluster](charts/bookkeeper/README.md#installing-bookkeeper-cluster).
+- Once that is done, you would need to install the [bookkeeper operator](charts/bookkeeper-operator/README.md#deploying-bookkeeper-operator) and a [bookkeeper cluster](charts/bookkeeper/README.md#deploying-bookkeeper).
 - You then need to setup a [Long-Term Storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md#use-nfs-as-longtermstorage) (or Tier 2) before moving to the next step.
 - Finally install the pravega operator and a pravega cluster.
 
