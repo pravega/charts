@@ -30,7 +30,7 @@ Follow the commands provided in the links that each of the following steps guide
 - First install the zookeeper operator and a zookeeper cluster.
 - Once that is done, you would need to install the [bookkeeper operator](charts/bookkeeper-operator/README.md#deploying-bookkeeper-operator) and a [bookkeeper cluster](charts/bookkeeper/README.md#deploying-bookkeeper).
 - You then need to setup a [Long-Term Storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md#use-nfs-as-longtermstorage) (or Tier 2) before moving to the next step.
-- Finally install the pravega operator and a pravega cluster.
+- Finally install the [pravega operator](charts/pravega-operator/README.md#deploying-pravega-operator) and a [pravega cluster](charts/pravega/README.md#deploying-pravega).
 
 ## Contributing
 We thrive to build a welcoming and open community for anyone who wants to use the pravega helm charts or contribute to it. [Here](https://github.com/pravega/charts/wiki/Contributing) we describe how to contribute to the helm charts. Contact the developers and community on [slack](https://pravega-io.slack.com/) ([signup](https://pravega-slack-invite.herokuapp.com/)) if you need any help.
