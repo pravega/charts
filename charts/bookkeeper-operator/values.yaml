@@ -4,7 +4,7 @@
 
 image:
   repository: pravega/bookkeeper-operator
-  tag: 0.1.4
+  tag: 0.1.5
   pullPolicy: IfNotPresent
 
 ## Install RBAC roles and bindings.
@@ -25,15 +25,17 @@ testmode:
   ## version is used to specify the major version number
   ## of the unreleased bookkeeper version that you wish to deploy
   ## or provide an upgrade path to
-  ## Note: mention the major version number
+  ## Mention the major version number
   ## eg. enter 0.8.3 if u wish to deploy version 0.8.3-2500.efe501a
+  ## NOTE: this field is deprecated and will be removed in future releases
   version: ""
   ## fromVersion is used to specify the major version number
   ## of the unreleased bookkeeper version you wish to provide an upgrade path from
   ## i.e. if you wish to provide an upgrade path from this unreleased version (testmode.fromVersion)
   ## to the unreleased version number specified by the previous field (testmode.version)
-  ## Note: mention the major version number
+  ## Mention the major version number
   ## eg. enter 0.7.4 if u wish to provide an upgrade path from pravega 0.7.4 to 0.8.3
+  ## NOTE: this field is deprecated and will be removed in future releases
   fromVersion: ""
 
 webhookCert:
