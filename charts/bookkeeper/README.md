@@ -6,8 +6,8 @@ Here, we briefly describe how to [install](#installing-bookkeeper-cluster)/[upda
 
 - Kubernetes 1.15+ with Beta APIs
 - Helm 3+
-- An existing Apache Zookeeper 3.6.1 cluster. This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator)
-- Bookkeeper Operator. Please refer [this](../bookkeeper-operator/README.md)
+- An existing [Apache Zookeeper cluster](https://github.com/pravega/zookeeper-operator/blob/master/charts/zookeeper/README.md#installing-the-chart). This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator/tree/master/charts/zookeeper-operator#installing-the-chart)
+- [Bookkeeper Operator](../bookkeeper-operator/README.md#deploying-bookkeeper-operator)
 
 ## Installing Bookkeeper Cluster
 
