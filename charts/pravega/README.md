@@ -6,10 +6,10 @@ Here, we briefly describe how to [install](#installing-pravega-cluster)/[update]
 
   - Kubernetes 1.15+ with Beta APIs
   - Helm 3.2.1+
-  - An existing Apache Zookeeper 3.6.1 cluster. This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator)
-  - An existing Apache Bookkeeper 4.9.2 cluster. This can be easily deployed using our [BookKeeper Operator](../bookkeeper-operator/README.md#deploying-bookkeeper-operator)
-  - Pravega Operator. Please refer [this](../pravega-operator/README.md#deploying-pravega-operator)
-  - LongTerm Storage ([options for long term storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md))
+  - An existing [Apache Zookeeper cluster](https://github.com/pravega/zookeeper-operator/blob/master/charts/zookeeper/README.md#installing-the-chart). This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator/tree/master/charts/zookeeper-operator#installing-the-chart)
+  - An existing [Apache Bookkeeper cluster](../bookkeeper/README.md#deploying-bookkeeper). This can be easily deployed using our [BookKeeper Operator](../bookkeeper-operator/README.md#deploying-bookkeeper-operator)
+  - [Pravega Operator](../pravega-operator/README.md#deploying-pravega-operator)
+  - [LongTerm Storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md))
 
 ## Installing Pravega Cluster
 
@@ -28,7 +28,7 @@ where:
 - **[BOOKKEEPER_SVC]** is the name of the headless service of your Bookkeeper deployment (e.g. `bookkeeper-bookie-0.bookkeeper-bookie-headless.default.svc.cluster.local:3181,bookkeeper-bookie-1.bookkeeper-bookie-headless.default.svc.cluster.local:3181,bookkeeper-bookie-2.bookkeeper-bookie-headless.default.svc.cluster.local:3181`).
 - **[TIER2_NAME]** is the longtermStorage `PersistentVolumeClaim` name (`pravega-tier2` if you created the PVC using the manifest provided).
 
->Note:  You need to ensure that the [CLUSTER_NAME] is the same value as that provided in the [bookkeeper chart configuration](https://github.com/pravega/bookkeeper-operator/tree/master/charts/bookkeeper#configuration),the default value for which is `pravega` and can be achieved by either providing the `[RELEASE_NAME] = pravega` or by providing `--set fullnameOverride=pravega` at the time of installing the pravega chart. On the contrary, the default value of [CLUSTER_NAME] in the bookkeeper charts can also be overridden by providing `--set pravegaClusterName=[CLUSTER_NAME]` at the time of installing the bookkeeper chart)
+>Note:  You need to ensure that the [CLUSTER_NAME] is the same value as that provided in the [bookkeeper chart configuration](https://github.com/pravega/charts/blob/master/charts/bookkeeper/README.md#configuration),the default value for which is `pravega` and can be achieved by either providing the `[RELEASE_NAME] = pravega` or by providing `--set fullnameOverride=pravega` at the time of installing the pravega chart. On the contrary, the default value of [CLUSTER_NAME] in the bookkeeper charts can also be overridden by providing `--set pravegaClusterName=[CLUSTER_NAME]` at the time of installing the bookkeeper chart)
 
 >Note: If we provide [RELEASE_NAME] same as chart name, cluster name will be same as release-name. But if we are providing a different name for release(other than pravega in this case), cluster name will be [RELEASE_NAME]-[chart-name]. However, cluster name can be overridden by providing `--set  fullnameOverride=[CLUSTER_NAME]` along with helm install command.
 
@@ -75,9 +75,9 @@ And the `REST` management interface is available at:
 http://[CLUSTER_NAME]-pravega-controller.[NAMESPACE]:10080/
 ```
 
-Check out the [external access documentation](https://github.com/pravega/pravega-operator/blob/master/doc/external-access.md) if your clients need to connect to Pravega from outside Kubernetes.
+Check out the documentation on [external access](https://github.com/pravega/pravega-operator/blob/master/doc/external-access.md) if your clients need to connect to Pravega from outside Kubernetes.
 
-Check out the [exposing Segmentstore service on single IP address](https://github.com/pravega/pravega-operator/blob/master/doc/external-access.md#exposing-segmentstore-service-on-single-ip-address-and-different-ports) if your clients need to connect to all Pravega Segmentstore instances on the same IP address from outside Kubernetes.
+Check out the section on [exposing Segmentstore service on single IP address](https://github.com/pravega/pravega-operator/blob/master/doc/external-access.md#exposing-segmentstore-service-on-single-ip-address-and-different-ports) if your clients need to connect to all Pravega Segmentstore instances on the same IP address from outside Kubernetes.
 
 ## Updating Pravega Cluster
 

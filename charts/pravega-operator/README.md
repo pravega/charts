@@ -34,7 +34,7 @@ This command deploys a pravega-operator on the Kubernetes cluster in its default
 
 ## Upgrading Pravega-Operator
 
-For upgrading pravega-operator, please refer [upgrade guide](../../doc/operator-upgrade.md)
+For upgrading pravega-operator, please refer [upgrade guide](https://github.com/pravega/pravega-operator/blob/master/doc/operator-upgrade.md)
 
 ## Uninstalling Pravega-Operator
 
