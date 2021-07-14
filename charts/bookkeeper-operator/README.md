@@ -10,7 +10,7 @@ Here, we briefly describe how to install [Bookkeeper Operator](https://github.co
 
 ## Installing Bookkeeper-Operator
 
-> Note: If you are running on Google Kubernetes Engine (GKE), please [check this first](../../doc/development.md#installation-on-google-kubernetes-engine).
+> Note: If you are running on Google Kubernetes Engine (GKE), please [check this first](https://github.com/pravega/bookkeeper-operator/blob/master/doc/development.md#installation-on-google-kubernetes-engine).
 To install the bookkeeper-operator chart, use the following commands:
 
 ```

@@ -7,9 +7,9 @@ Here, we briefly describe how to [install](#installing-pravega-cluster)/[update]
   - Kubernetes 1.15+ with Beta APIs
   - Helm 3.2.1+
   - An existing Apache Zookeeper 3.6.1 cluster. This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator)
-  - An existing Apache Bookkeeper 4.9.2 cluster. This can be easily deployed using our [BookKeeper Operator](https://github.com/pravega/bookkeeper-operator)
-  - Pravega Operator. Please refer [this](../../charts/pravega-operator/README.md)
-  - LongTerm Storage ([options for long term storage](../../doc/longtermstorage.md))
+  - An existing Apache Bookkeeper 4.9.2 cluster. This can be easily deployed using our [BookKeeper Operator](../bookkeeper-operator/README.md#deploying-bookkeeper-operator)
+  - Pravega Operator. Please refer [this](../pravega-operator/README.md#deploying-pravega-operator)
+  - LongTerm Storage ([options for long term storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md))
 
 ## Installing Pravega Cluster
 
@@ -75,9 +75,9 @@ And the `REST` management interface is available at:
 http://[CLUSTER_NAME]-pravega-controller.[NAMESPACE]:10080/
 ```
 
-Check out the [external access documentation](../../doc/external-access.md) if your clients need to connect to Pravega from outside Kubernetes.
+Check out the [external access documentation](https://github.com/pravega/pravega-operator/blob/master/doc/external-access.md) if your clients need to connect to Pravega from outside Kubernetes.
 
-Check out the [exposing Segmentstore service on single IP address](../..//doc/external-access.md#exposing-segmentstore-service-on-single-ip-address-and-different-ports) if your clients need to connect to all Pravega Segmentstore instances on the same IP address from outside Kubernetes.
+Check out the [exposing Segmentstore service on single IP address](https://github.com/pravega/pravega-operator/blob/master/doc/external-access.md#exposing-segmentstore-service-on-single-ip-address-and-different-ports) if your clients need to connect to all Pravega Segmentstore instances on the same IP address from outside Kubernetes.
 
 ## Updating Pravega Cluster
 
@@ -91,7 +91,7 @@ helm upgrade [RELEASE_NAME]  --version=[VERSION]  --set controller.replicas=2 --
  ```
   helm upgrade pravega charts/pravega --set-string options."log\.level"="DEBUG"
   ```
-Please refer [upgrade](../../doc/upgrade-cluster.md) for upgrading cluster versions.
+Please refer [upgrade](https://github.com/pravega/pravega-operator/blob/master/doc/upgrade-cluster.md) for upgrading cluster versions.
 
 ## Uninstalling Pravega Cluster
 
