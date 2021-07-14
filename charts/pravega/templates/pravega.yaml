@@ -31,7 +31,7 @@ spec:
     controllerTokenSecret: {{ .Values.authentication.controllerTokenSecret }}
     {{- end }}
     {{- end }}
-  version: {{ .Values.version }}
+  version: {{ .Values.image.tag }}
   zookeeperUri: {{ .Values.zookeeperUri }}
   bookkeeperUri: {{ .Values.bookkeeperUri }}
   externalAccess:
