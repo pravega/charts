@@ -9,7 +9,7 @@ Here, we briefly describe how to [install](#installing-pravega-cluster)/[update]
   - An existing [Apache Zookeeper cluster](https://github.com/pravega/zookeeper-operator/blob/master/charts/zookeeper/README.md#installing-the-chart). This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator/tree/master/charts/zookeeper-operator#installing-the-chart)
   - An existing [Apache Bookkeeper cluster](../bookkeeper/README.md#deploying-bookkeeper). This can be easily deployed using our [BookKeeper Operator](../bookkeeper-operator/README.md#deploying-bookkeeper-operator)
   - [Pravega Operator](../pravega-operator/README.md#deploying-pravega-operator)
-  - [LongTerm Storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md))
+  - [LongTerm Storage](https://github.com/pravega/pravega-operator/blob/master/doc/longtermstorage.md)
 
 ## Installing Pravega Cluster
 
