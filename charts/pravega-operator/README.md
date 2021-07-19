@@ -53,15 +53,15 @@ The following table lists the configurable parameters of the pravega-operator ch
 | Parameter | Description | Default |
 | ----- | ----------- | ------ |
 | `image.repository` | Image repository | `pravega/pravega-operator` |
-| `image.tag` | Image tag | `0.5.3` |
+| `image.tag` | Image tag | `0.5.4` |
 | `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `crd.create` | Create pravega CRD | `true` |
 | `rbac.create` | Create RBAC resources | `true` |
 | `serviceAccount.create` | Create service account | `true` |
 | `serviceAccount.name` | Name for the service account | `pravega-operator` |
 | `testmode.enabled` | Enable test mode | `false` |
-| `testmode.version` | Major version number of the alternate pravega image we want the operator to deploy or provide an upgrade path to, if test mode is enabled | `""` |
-| `testmode.fromVersion` | Major version number of the alternate pravega image, if we wish to provide an upgrade path from this version to the version mentioned above, if test mode is enabled | `""` |
+| `testmode.version` | `DEPRECATED` Major version number of the alternate pravega image we want the operator to deploy or provide an upgrade path to, if test mode is enabled | `""` |
+| `testmode.fromVersion` | `DEPRECATED` Major version number of the alternate pravega image, if we wish to provide an upgrade path from this version to the version mentioned above, if test mode is enabled | `""` |
 | `webhookCert.crt` | tls.crt value corresponding to the certificate | |
 | `webhookCert.key` | tls.key value corresponding to the certificate | |
 | `webhookCert.generate` | Whether to generate the certificate and the issuer (set to false while using self-signed certificates) | `false` |
