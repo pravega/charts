@@ -2,8 +2,6 @@
 ## This is a YAML-formatted file.
 ## Declare variables to be passed into your templates.
 
-version: 0.9.0
-
 tls: {}
   # secret:
   #   controller: "controller-pki"
@@ -31,6 +29,7 @@ externalAccess:
 image:
   repository: pravega/pravega
   pullPolicy: IfNotPresent
+  tag: 0.9.0
 
 hooks:
   image:
