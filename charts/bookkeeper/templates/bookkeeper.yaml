@@ -14,7 +14,7 @@ spec:
     imageSpec:
       repository: {{ .Values.image.repository }}
       pullPolicy: {{ .Values.image.pullPolicy }}
-  version: {{ .Values.version }}
+  version: {{ .Values.image.tag }}
   zookeeperUri: {{ .Values.zookeeperUri }}
   envVars: {{ template "bookkeeper.fullname" . }}-configmap
   autoRecovery: {{ .Values.autoRecovery }}
