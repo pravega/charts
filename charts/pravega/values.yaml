@@ -16,7 +16,10 @@ authentication:
   #segmentStoreTokenSecret:
   ##controllerTokenSecret is ignored if authentication is disabled
   #controllerTokenSecret:
-
+  
+influxDBSecret: {}
+  # name:
+  # path:
 zookeeperUri: zookeeper-client:2181
 bookkeeperUri: bookkeeper-bookie-headless:3181
 
