@@ -109,7 +109,9 @@ The following table lists the configurable parameters of the pravega chart and t
 
 | Parameter | Description | Default |
 | ----- | ----------- | ------ |
-| `version` | Pravega version | `0.9.0` |
+| `image.tag` | `Version of Pravega image` | `0.9.1` |
+| `image.repository` | Image repository | `pravega/pravega` |
+| `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `tls` | Pravega security configuration passed to the Pravega processes | `{}` |
 | `authentication.enabled` | Enable authentication to authorize client communication with Pravega | `false` |
 | `authentication.passwordAuthSecret` | Name of Secret containing Password based Authentication Parameters, if authentication is enabled | |
@@ -120,8 +122,6 @@ The following table lists the configurable parameters of the pravega chart and t
 | `externalAccess.enabled` | Enable external access | `false` |
 | `externalAccess.type` | External access service type, if external access is enabled (LoadBalancer/NodePort) | `LoadBalancer` |
 | `externalAccess.domainName` | External access domain name, if external access is enabled  | |
-| `image.repository` | Image repository | `pravega/pravega` |
-| `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `debugLogging` | Enable debug logging | `false` |
 | `serviceAccount.name` | Service account to be used | `pravega-components` |
 | `controller.replicas` | Number of controller replicas | `1` |
