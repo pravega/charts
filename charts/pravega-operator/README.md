@@ -37,6 +37,7 @@ This command deploys a pravega-operator on the Kubernetes cluster in its default
 The following table lists which version of the pravega operator chart would install which version of the pravega operator.
 
 | Chart Version | App Version |
+| ------------- | ----------- |
 | 0.4.5 | 0.4.5 |
 | 0.5.0 | 0.5.0 |
 | 0.5.1 | 0.5.1 |
