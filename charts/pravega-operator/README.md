@@ -32,6 +32,18 @@ This command deploys a pravega-operator on the Kubernetes cluster in its default
 
 >Note: If the pravega-operator version is 0.4.5, webhookCert.certName and webhookCert.secretName should not be set. Also in this case, bookkeeper operator, cert-manager and the certificate/issuer do not need to be deployed as prerequisites.
 
+## Version Compatibility
+
+The following table lists which version of the pravega operator chart would install which version of the pravega operator.
+
+| Chart Version | App Version |
+| 0.4.5 | 0.4.5 |
+| 0.5.0 | 0.5.0 |
+| 0.5.1 | 0.5.1 |
+| 0.5.2 | 0.5.2 |
+| 0.5.3 | 0.5.3 |
+| 0.6.0 | 0.5.4 |
+
 ## Upgrading Pravega-Operator
 
 For upgrading pravega-operator, please refer [upgrade guide](https://github.com/pravega/pravega-operator/blob/master/doc/operator-upgrade.md)
