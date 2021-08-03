@@ -149,6 +149,13 @@ spec:
       mountPath: {{ .Values.segmentStore.secret.path }}
       {{- end }}
     {{- end }}
+    {{- if .Values.influxDBSecret }}
+    influxDBSecret:
+      secret: {{ .Values.influxDBSecret.name }}
+      {{- if .Values.influxDBSecret.path }}
+      mountPath: {{ .Values.influxDBSecret.path }}
+      {{- end }}
+    {{- end }}
     {{- if .Values.controller.jvmOptions }}
     controllerjvmOptions:
 {{ toYaml .Values.controller.jvmOptions | indent 6 }}
