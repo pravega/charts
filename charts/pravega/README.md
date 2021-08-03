@@ -79,6 +79,38 @@ Check out the documentation on [external access](https://github.com/pravega/prav
 
 Check out the section on [exposing Segmentstore service on single IP address](https://github.com/pravega/pravega-operator/blob/master/doc/external-access.md#exposing-segmentstore-service-on-single-ip-address-and-different-ports) if your clients need to connect to all Pravega Segmentstore instances on the same IP address from outside Kubernetes.
 
+## Version Compatibility
+
+The following table lists which version of the pravega chart would install which version of the pravega by default.
+
+| Chart Version | App Version |
+| :-----------: | :---------: |
+| 0.5.0 | 0.5.0 |
+| 0.5.1 | 0.5.1 |
+| 0.6.0 | 0.6.0 |
+| 0.6.1 | 0.6.1 |
+| 0.6.2 | 0.6.2 |
+| 0.7.0 | 0.7.0 |
+| 0.7.1 | 0.7.1 |
+| 0.7.2 | 0.7.2 |
+| 0.7.3 | 0.7.3 |
+| 0.8.0 | 0.8.0 |
+| 0.9.0 | 0.9.0 |
+| 0.9.1 | 0.9.1 |
+| 0.10.0 | 0.9.1 |
+
+The following table captures any breaking changes between the App Versions i.e. the pravega versions vs. the Chart Versions.
+> NOTE: From Chart Version 0.10.0 onwards, the App Version and the Chart Version fields have been decoupled.
+
+| Chart Version \ Pravega Version | 0.5.x | 0.6.x | 0.7.x | 0.8.x | 0.9.x |
+| :-----------------------------: | :---: | :---: | :---: | :---: | :---: |
+| 0.5.x | Yes | No | No | No | No |
+| 0.6.x | Yes | Yes | No | No | No |
+| 0.7.x | Yes | Yes | Yes | No | No |
+| 0.8.x | Yes | Yes | Yes | Yes | No |
+| 0.9.x | Yes | Yes | Yes | Yes | Yes |
+| 0.10.x | Yes | Yes | Yes | Yes | Yes |
+
 ## Updating Pravega Cluster
 
 For updating the pravega cluster, use the following command

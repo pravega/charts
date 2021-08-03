@@ -37,7 +37,7 @@ This command deploys a pravega-operator on the Kubernetes cluster in its default
 The following table lists which version of the pravega operator chart would install which version of the pravega operator by default.
 
 | Chart Version | App Version |
-| ------------- | ----------- |
+| :-----------: | :---------: |
 | 0.4.5 | 0.4.5 |
 | 0.5.0 | 0.5.0 |
 | 0.5.1 | 0.5.1 |
@@ -45,15 +45,28 @@ The following table lists which version of the pravega operator chart would inst
 | 0.5.3 | 0.5.3 |
 | 0.6.0 | 0.5.4 |
 
-The following table captures any breaking changes between the App Versions i.e. the pravega operator versions vs. the Chart Versions.
+The following table captures compatibility between the App Versions i.e. the pravega operator versions vs. the Chart Versions.
 > NOTE: From Chart Version 0.6.0 onwards, the App Version and the Chart Version fields have been decoupled.
 
-| |             | Operator Version | |  
-| Chart Version | 0.4.x | 0.5.x |
-| :-----------: | :---: | :---: |
+| Chart Version \ Operator Version | 0.4.x | 0.5.x |
+| :------------------------------: | :---: | :---: |
 | 0.4.x | Yes | No |
 | 0.5.x | No | Yes |
 | 0.6.x | No | Yes |
+
+The following table captures compatibility between pravega operator charts with pravega charts
+
+| Pravega Chart \ Pravega Operator Chart Version | 0.4.x | 0.5.x | 0.6.x |
+| :----------------------------------------------------: | :---: | :---: | :---: |
+| pravega-bk-0.5.x | Yes | No | No |
+| pravega-bk-0.6.x | Yes | No | No |
+| pravega-bk-0.7.x | Yes | No | No |
+| pravega-0.5.x | No | Yes | Yes |
+| pravega-0.6.x | No | Yes | Yes |
+| pravega-0.7.x | No | Yes | Yes |
+| pravega-0.8.x | No | Yes | Yes |
+| pravega-0.9.x | No | Yes | Yes |
+| pravega-0.10.x | No | Yes | Yes |
 
 ## Upgrading Pravega-Operator
 
