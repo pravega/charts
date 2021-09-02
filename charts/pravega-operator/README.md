@@ -53,7 +53,7 @@ The following table lists the configurable parameters of the pravega-operator ch
 | Parameter | Description | Default |
 | ----- | ----------- | ------ |
 | `image.repository` | Image repository | `pravega/pravega-operator` |
-| `image.tag` | Image tag | `0.5.4` |
+| `image.tag` | Image tag | `0.5.5` |
 | `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `crd.create` | Create pravega CRD | `true` |
 | `rbac.create` | Create RBAC resources | `true` |
