@@ -65,7 +65,7 @@ spec:
   resources:
 {{ toYaml .Values.resources | indent 6 }}
   {{- end }}
-{{- if .Values.storage }}
+  {{- if .Values.storage }}
   storage:
     ledgerVolumeClaimTemplate:
       accessModes: [ "ReadWriteOnce" ]
@@ -97,7 +97,7 @@ spec:
         requests:
           storage: {{ .Values.storage.index.volumeSize }}
       {{- end }}
-{{- end }}
+  {{- end }}
   {{- if and .Values.jvmOptions (or .Values.jvmOptions.memoryOpts .Values.jvmOptions.gcOpts .Values.jvmOptions.gcLoggingOpts .Values.jvmOptions.extraOpts) }}
   jvmOptions:
     {{- if .Values.jvmOptions.memoryOpts }}
