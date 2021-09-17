@@ -32,7 +32,7 @@ segmentStore:
     ## used to override the service type for segmentStore
     type:
     annotations: {}
-  jvmOptions: ["-Xms2g", "-Xmx4g", "-XX:MaxDirectMemorySize=11g", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
+  jvmOptions: ["-Xms4g", "-Xmx4g", "-XX:MaxDirectMemorySize=11g", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
 
 options:
   bookkeeper.ensemble.size: "3"
