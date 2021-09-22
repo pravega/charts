@@ -2,7 +2,7 @@
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "pravega.fullname" . }}-service-account
+  name: {{ template "pravega.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
 {{ include "pravega.commonLabels" . | indent 4 }}
