@@ -60,8 +60,8 @@ spec:
 {{ toYaml .Values.segmentStore.affinity | indent 6 }}
     {{- end }}
     {{- if .Values.externalAccess.enabled }}
-    controllerServiceAccountName: {{ .Values.serviceAccount.name }}
-    segmentStoreServiceAccountName: {{ .Values.serviceAccount.name }}
+    controllerServiceAccountName: {{ template "pravega.fullname" . }}-service-account
+    segmentStoreServiceAccountName: {{ template "pravega.fullname" . }}-service-account
     {{- if .Values.segmentStore.service.loadBalancerIP }}
     segmentStoreLoadBalancerIP: {{ .Values.segmentStore.service.loadBalancerIP  }}
     {{- end }}
