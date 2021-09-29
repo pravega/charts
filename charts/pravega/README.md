@@ -32,6 +32,8 @@ where:
 
 >Note: If we provide [RELEASE_NAME] same as chart name, cluster name will be same as release-name. But if we are providing a different name for release(other than pravega in this case), cluster name will be [RELEASE_NAME]-[chart-name]. However, cluster name can be overridden by providing `--set  fullnameOverride=[CLUSTER_NAME]` along with helm install command.
 
+>Note: If we are using fullnameOverride, make sure that resource names are not clashing with another deployment.
+
 This command deploys pravega on the Kubernetes cluster in its default configuration. The [configuration](#pravega-configuration) section lists the parameters that can be configured during installation.
 
 >Note: If the underlying pravega operator version is 0.4.5, bookkeeperUri should not be set, and the pravega-bk chart should be used instead of the pravega chart

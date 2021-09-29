@@ -42,9 +42,6 @@ hooks:
 
 debugLogging: false
 
-serviceAccount:
-  name: pravega-components
-
 controller:
   replicas: 1
   maxUnavailableReplicas:
