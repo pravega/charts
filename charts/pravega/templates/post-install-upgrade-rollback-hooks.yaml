@@ -1,10 +1,10 @@
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "pravega.fullname" . }}-post-install-upgrade
+  name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
   namespace: {{ .Release.Namespace }}
   annotations:
-    "helm.sh/hook": post-install, post-upgrade
+    "helm.sh/hook": post-install, post-upgrade, post-rollback
     "helm.sh/hook-weight": "1"
     "helm.sh/hook-delete-policy": hook-succeeded, before-hook-creation, hook-failed
 rules:
@@ -19,19 +19,19 @@ rules:
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "pravega.fullname" . }}-post-install-upgrade
+  name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
   namespace: {{ .Release.Namespace }}
   annotations:
-    "helm.sh/hook": post-install, post-upgrade
+    "helm.sh/hook": post-install, post-upgrade, post-rollback
     "helm.sh/hook-weight": "1"
     "helm.sh/hook-delete-policy": hook-succeeded, before-hook-creation, hook-failed
 subjects:
 - kind: ServiceAccount
-  name: {{ template "pravega.fullname" . }}-post-install-upgrade
+  name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
   namespace: {{.Release.Namespace}}
 roleRef:
   kind: Role
-  name: {{ template "pravega.fullname" . }}-post-install-upgrade
+  name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
   apiGroup: rbac.authorization.k8s.io
 
 ---
@@ -39,10 +39,10 @@ roleRef:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ template "pravega.fullname" . }}-post-install-upgrade
+  name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
   namespace: {{ .Release.Namespace }}
   annotations:
-    "helm.sh/hook": post-install, post-upgrade
+    "helm.sh/hook": post-install, post-upgrade, post-rollback
     "helm.sh/hook-weight": "1"
     "helm.sh/hook-delete-policy": hook-succeeded, before-hook-creation, hook-failed
 
@@ -51,10 +51,10 @@ metadata:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "pravega.fullname" . }}-post-install-upgrade
+  name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
   namespace: {{ .Release.Namespace }}
   annotations:
-      "helm.sh/hook": post-install, post-upgrade
+      "helm.sh/hook": post-install, post-upgrade, post-rollback
       "helm.sh/hook-weight": "1"
       "helm.sh/hook-delete-policy": hook-succeeded, before-hook-creation, hook-failed
 data:
@@ -87,22 +87,22 @@ data:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ template "pravega.fullname" . }}-post-install-upgrade
+  name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
   namespace: {{ .Release.Namespace }}
   annotations:
-    "helm.sh/hook": post-install, post-upgrade
+    "helm.sh/hook": post-install, post-upgrade, post-rollback
     "helm.sh/hook-weight": "2"
     "helm.sh/hook-delete-policy": hook-succeeded, before-hook-creation, hook-failed
 spec:
   backoffLimit: {{ .Values.hooks.backoffLimit }}
   template:
     metadata:
-      name: {{ template "pravega.fullname" . }}-post-install-upgrade
+      name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
     spec:
-      serviceAccountName: {{ template "pravega.fullname" . }}-post-install-upgrade
+      serviceAccountName: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
       restartPolicy: Never
       containers:
-      - name: post-install-upgrade-job
+      - name: post-install-upgrade-rollback-job
         image: "{{ .Values.hooks.image.repository }}:{{ .Values.hooks.image.tag }}"
         command:
           - /scripts/validations.sh
@@ -113,5 +113,5 @@ spec:
       volumes:
         - name: sh
           configMap:
-            name: {{ template "pravega.fullname" . }}-post-install-upgrade
+            name: {{ template "pravega.fullname" . }}-post-install-upgrade-rollback
             defaultMode: 0555
