@@ -90,7 +90,7 @@ segmentStore:
     annotations: {}
     loadBalancerIP:
     externalTrafficPolicy:
-  jvmOptions: ["-Xms1g", "-Xmx2g", "-XX:MaxDirectMemorySize=2g", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
+  jvmOptions: ["-Xms1g", "-Xmx1g", "-XX:MaxDirectMemorySize=2560m", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
   labels: {}
   annotations: {}
   stsNameSuffix:
@@ -140,7 +140,7 @@ options:
   bookkeeper.ack.quorum.size: "3"
   bookkeeper.write.timeout.milliseconds: "60000"
   bookkeeper.write.outstanding.bytes.max: "33554432"
-  pravegaservice.cache.size.max: "1073741824"
+  pravegaservice.cache.size.max: "1610612736"
   pravegaservice.cache.time.seconds.max: "600"
   pravegaservice.service.listener.port: "12345"
   hdfs.block.size: "67108864"
