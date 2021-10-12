@@ -19,6 +19,7 @@ zookeeperUri: zookeeper-client:2181
 pravegaClusterName: pravega
 autoRecovery: true
 blockOwnerDeletion: true
+runAsPrivilegedUser: true
 affinity: {}
 labels: {}
 annotations: {}
