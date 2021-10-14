@@ -151,6 +151,7 @@ The following table lists the configurable parameters of the Bookkeeper chart an
 | `pravegaClusterName` | Name of the pravega cluster | `pravega` |
 | `autoRecovery`| Enable bookkeeper auto-recovery | `true` |
 | `blockOwnerDeletion`| Enable blockOwnerDeletion | `true` |
+| `runAsPrivilegedUser`| Enable running container as root user | `true` |
 | `affinity` | Specifies scheduling constraints on bookie pods | `{}` |
 | `labels` | Labels to be added to the Bookie Pods | |
 | `annotations` | Annotations to be added to the Bookie Pods | |

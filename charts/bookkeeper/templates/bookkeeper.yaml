@@ -27,6 +27,11 @@ spec:
   {{- else }}
   blockOwnerDeletion: false
   {{- end }}
+  {{- if or (.Values.runAsPrivilegedUser) (eq (.Values.runAsPrivilegedUser | toString) "<nil>") }}
+  runAsPrivilegedUser: true
+  {{- else }}
+  runAsPrivilegedUser: false
+  {{- end }}
   {{- if .Values.labels }}
   labels:
 {{ toYaml .Values.labels | indent 4 }}
