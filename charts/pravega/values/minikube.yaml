@@ -7,7 +7,7 @@ controller:
     limits:
       cpu: 500m
       memory: 1Gi
-  jvmOptions: []
+  jvmOptions: ["-Xms256m", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
 
 segmentStore:
   replicas: 1
@@ -18,9 +18,10 @@ segmentStore:
     limits:
       cpu: 500m
       memory: 2Gi
-  jvmOptions: []
+  jvmOptions: ["-Xms250m", "-Xmx250m", "-XX:MaxDirectMemorySize=640m", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
 
 options:
   bookkeeper.ack.quorum.size: "1"
   bookkeeper.write.quorum.size: "1"
   bookkeeper.ensemble.size: "1"
+  pravegaservice.cache.size.max: "402653184"
