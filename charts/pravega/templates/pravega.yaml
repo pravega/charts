@@ -184,7 +184,7 @@ spec:
         {{- end }}
         {{- if .Values.storage.longtermStorage.custom.env }}
         env:
-{{ toYaml .Values.storage.longtermStorage.custom.options | indent 10 }}
+{{ toYaml .Values.storage.longtermStorage.custom.env | indent 10 }}
         {{- end }}
       {{- else if eq $longTermStorageType "ecs" }}
       ecs:
