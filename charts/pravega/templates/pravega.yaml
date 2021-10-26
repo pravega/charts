@@ -176,7 +176,17 @@ spec:
           storage: {{ .Values.storage.cache.size }}
     {{- end }}
     longtermStorage:
-      {{- if eq $longTermStorageType "ecs" }}
+      {{- if eq $longTermStorageType "custom" }}
+      custom:
+        {{- if .Values.storage.longtermStorage.custom.options }}
+        options:
+{{ toYaml .Values.storage.longtermStorage.custom.options | indent 10 }}
+        {{- end }}
+        {{- if .Values.storage.longtermStorage.custom.env }}
+        env:
+{{ toYaml .Values.storage.longtermStorage.custom.options | indent 10 }}
+        {{- end }}
+      {{- else if eq $longTermStorageType "ecs" }}
       ecs:
         configUri: {{ .Values.storage.longtermStorage.ecs.configUri }}
         bucket: {{ .Values.storage.longtermStorage.ecs.bucket }}

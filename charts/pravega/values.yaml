@@ -16,7 +16,7 @@ authentication:
   #segmentStoreTokenSecret:
   ##controllerTokenSecret is ignored if authentication is disabled
   #controllerTokenSecret:
-  
+
 influxDBSecret: {}
   # name:
   # path:
@@ -105,7 +105,7 @@ storage:
 
   longtermStorage:
     ## configure the long term storage backend type
-    ## accepted values : filesystem/ecs/hdfs
+    ## accepted values : filesystem/ecs/hdfs/custom
     ## default option is filesystem
     type: filesystem
 
@@ -129,6 +129,23 @@ storage:
       # uri: ""
       # root: ""
       # replicationFactor:
+
+    ## Custom is used to configure custom storage types
+    ## Custom storage type has to be passed in TIER2_STORAGE env
+    custom: {}
+      # options:
+        # pravegaservice.storage.layout: "CHUNKED_STORAGE"
+        # pravegaservice.storage.impl.name: "S3"
+        # s3.bucket: "aws-sdk-test"
+        # s3.prefix: "10-11-1"
+        # s3.connect.config.uri.override: "false"
+        # s3.connect.config.uri: <uri>
+        # s3.connect.config.access.key: <access key>
+        # s3.connect.config.secret.key: <secret key>
+      # env:
+        # TIER2_STORAGE: "S3"
+        # AWS_ACCESS_KEY_ID: "key"
+        # AWS_SECRET_ACCESS_KEY: "secret"
 
   cache:
     size: 20Gi
