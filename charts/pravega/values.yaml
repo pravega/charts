@@ -131,6 +131,7 @@ storage:
       # replicationFactor:
 
     ## Custom is used to configure custom storage types
+    ## considered only if storage.longtermStorage.type = custom
     ## Custom storage type has to be passed in TIER2_STORAGE env
     custom: {}
       # options:
