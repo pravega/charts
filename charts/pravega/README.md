@@ -167,6 +167,7 @@ The following table lists the configurable parameters of the pravega chart and t
 | `storage.longtermStorage.filesystem.pvc` | Name of the pre-created PVC, if long term storage type is filesystem | `pravega-tier2` |
 | `storage.longtermStorage.ecs` | Configuration to use a Dell EMC ECS system, if long term storage type is ecs | `{}` |
 | `storage.longtermStorage.hdfs` | Configuration to use an HDFS system, if long term storage type is hdfs | `{}` |
+| `storage.longtermStorage.custom` | Configuration to use Custom storage system, if we wish to use a different long term storage type (i.e. neither of filesystem, ecs or hdfs)| `{}` |
 | `storage.cache.className` | Storage class for cache volume | `` |
 | `storage.cache.size` | Storage requests for cache volume | `20Gi` |
 | `options` | List of Pravega options | |
