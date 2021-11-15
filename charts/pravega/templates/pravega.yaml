@@ -164,6 +164,44 @@ spec:
     segmentStoreJVMOptions:
 {{ toYaml .Values.segmentStore.jvmOptions | indent 6 }}
     {{- end }}
+    {{- if .Values.controller.probes }}
+    controllerProbes:
+      {{- if .Values.controller.probes.readiness }}
+      readinessProbe:
+        initialDelaySeconds: {{ .Values.controller.probes.readiness.initialDelaySeconds | default 20 }}
+        periodSeconds: {{ .Values.controller.probes.readiness.periodSeconds | default 10 }}
+        failureThreshold: {{ .Values.controller.probes.readiness.failureThreshold | default 3 }}
+        successThreshold: {{ .Values.controller.probes.readiness.successThreshold | default 3 }}
+        timeoutSeconds: {{ .Values.controller.probes.readiness.timeoutSeconds | default 60 }}
+      {{- end }}
+      {{- if .Values.controller.probes.liveness }}
+      livenessProbe:
+        initialDelaySeconds: {{ .Values.controller.probes.liveness.initialDelaySeconds | default 60  }}
+        periodSeconds: {{ .Values.controller.probes.liveness.periodSeconds | default 15  }}
+        failureThreshold: {{ .Values.controller.probes.liveness.failureThreshold | default 4 }}
+        successThreshold: {{ .Values.controller.probes.liveness.successThreshold | default 1 }}
+        timeoutSeconds: {{ .Values.controller.probes.liveness.timeoutSeconds | default 5 }}
+      {{- end }}
+    {{- end }}
+    {{- if .Values.segmentStore.probes }}
+    segmentStoreProbes:
+      {{- if .Values.segmentStore.probes.readiness }}
+      readinessProbe:
+        initialDelaySeconds: {{ .Values.segmentStore.probes.readiness.initialDelaySeconds | default 10 }}
+        periodSeconds: {{ .Values.segmentStore.probes.readiness.periodSeconds | default 10 }}
+        failureThreshold: {{ .Values.segmentStore.probes.readiness.failureThreshold | default 30 }}
+        successThreshold: {{ .Values.segmentStore.probes.readiness.successThreshold | default 1 }}
+        timeoutSeconds: {{ .Values.segmentStore.probes.readiness.timeoutSeconds | default 5 }}
+      {{- end }}
+      {{- if .Values.segmentStore.probes.liveness }}
+      livenessProbe:
+        initialDelaySeconds: {{ .Values.segmentStore.probes.liveness.initialDelaySeconds | default 300  }}
+        periodSeconds: {{ .Values.segmentStore.probes.liveness.periodSeconds | default 15  }}
+        failureThreshold: {{ .Values.segmentStore.probes.liveness.failureThreshold | default 4 }}
+        successThreshold: {{ .Values.segmentStore.probes.liveness.successThreshold | default 1 }}
+        timeoutSeconds: {{ .Values.segmentStore.probes.liveness.timeoutSeconds | default 5 }}
+      {{- end }}
+    {{- end }}
     debugLogging: {{ .Values.debugLogging }}
     {{- if .Values.storage.cache }}
     cacheVolumeClaimTemplate:

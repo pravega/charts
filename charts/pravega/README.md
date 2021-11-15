@@ -142,6 +142,16 @@ The following table lists the configurable parameters of the pravega chart and t
 | `controller.jvmOptions` | JVM Options for controller | `["-Xms512m", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]` |
 | `controller.svcNameSuffix` | suffix for controller service name | `pravega-controller` |
 | `controller.initContainers` | Init Containers to add to controller pods | `[]` |
+| `controller.probes.readiness.initialDelaySeconds` | Number of seconds after the container has started before readiness probe is initiated | `20` |
+| `controller.probes.readiness.periodSeconds` | Number of seconds after which a container running within a pod will be probed | `10` |
+| `controller.probes.readiness.failureThreshold` | Minimum number of consecutive failures for the readiness probe to be considered failed | `3` |
+| `controller.probes.readiness.successThreshold` | Minimum number of consecutive successes for the readiness probe to be considered successful after having failed | `3` |
+| `controller.probes.readiness.timeoutSeconds` | Number of seconds after which the probe times out | `60` |
+| `controller.probes.liveness.initialDelaySeconds` | Number of seconds after the container has started before liveness probe is initiated | `60` |
+| `controller.probes.liveness.periodSeconds` | Number of seconds after which a container running within a pod will be probed | `15` |
+| `controller.probes.liveness.failureThreshold` | Minimum number of consecutive failures for the liveness probe to be considered failed | `4` |
+| `controller.probes.liveness.successThreshold` | Minimum number of consecutive successes for the liveness probe to be considered successful after having failed | `1` |
+| `controller.probes.liveness.timeoutSeconds` | Number of seconds after which the probe times out | `5` |
 | `segmentStore.replicas` | Number of segmentStore replicas | `1` |
 | `segmentStore.maxUnavailableReplicas` | Maximum number of unavailable replicas possible for segmentStore pdb | |
 | `segmentStore.secret` | Secret configuration for the segmentStore | `{}` |
@@ -162,6 +172,16 @@ The following table lists the configurable parameters of the pravega chart and t
 | `segmentStore.labels` | Labels to add to the segmentStore pods | `{}` |
 | `segmentStore.annotations` | Annotations to add to the segmentStore pods | `{}` |
 | `segmentStore.initContainers` | Init Containers to add to the segmentStore pods | `[]` |
+| `segmentStore.probes.readiness.initialDelaySeconds` | Number of seconds after the container has started before readiness probe is initiated | `10` |
+| `segmentStore.probes.readiness.periodSeconds` | Number of seconds after which a container running within a pod will be probed | `10` |
+| `segmentStore.probes.readiness.failureThreshold` | Minimum number of consecutive failures for the readiness probe to be considered failed | `30` |
+| `segmentStore.probes.readiness.successThreshold` | Minimum number of consecutive successes for the readiness probe to be considered successful after having failed | `1` |
+| `segmentStore.probes.readiness.timeoutSeconds` | Number of times Kubernetes will retry after a readiness probe failure before restarting the container | `5` |
+| `segmentStore.probes.liveness.initialDelaySeconds` | Number of seconds after the container has started before liveness probe is initiated | `300` |
+| `segmentStore.probes.liveness.periodSeconds` | Number of seconds after which a container running within a pod will be probed | `15` |
+| `segmentStore.probes.liveness.failureThreshold` | Minimum number of consecutive failures for the liveness probe to be considered failed | `4` |
+| `segmentStore.probes.liveness.successThreshold` | Minimum number of consecutive successes for the liveness probe to be considered successful after having failed | `1` |
+| `segmentStore.probes.liveness.timeoutSeconds` | Number of seconds after which the probe times out | `5` |
 | `authImplementations` | Plugin configuration to be used | `[]` |
 | `storage.longtermStorage.type` | Type of long term storage backend to be used (filesystem/ecs/hdfs) | `filesystem` |
 | `storage.longtermStorage.filesystem.pvc` | Name of the pre-created PVC, if long term storage type is filesystem | `pravega-tier2` |

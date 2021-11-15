@@ -65,6 +65,19 @@ controller:
   labels: {}
   annotations: {}
   initContainers: []
+  probes: {}
+  # readiness:
+  #   initialDelaySeconds: 20
+  #   periodSeconds: 10
+  #   failureThreshold: 3
+  #   successThreshold: 3
+  #   timeoutSeconds: 60
+  # liveness:
+  #   initialDelaySeconds: 60
+  #   periodSeconds: 15
+  #   failureThreshold: 4
+  #   successThreshold: 1
+  #   timeoutSeconds: 5
 
 segmentStore:
   replicas: 1
@@ -96,6 +109,19 @@ segmentStore:
   stsNameSuffix:
   headlessSvcNameSuffix:
   initContainers: []
+  probes: {}
+  # readiness:
+  #   initialDelaySeconds: 10
+  #   periodSeconds: 10
+  #   failureThreshold: 30
+  #   successThreshold: 1
+  #   timeoutSeconds: 5
+  # liveness:
+  #   initialDelaySeconds: 300
+  #   periodSeconds: 15
+  #   failureThreshold: 4
+  #   successThreshold: 1
+  #   timeoutSeconds: 5
 authImplementations: {}
   # mountPath: "/opt/pravega/pluginlib"
   # authHandlers:
