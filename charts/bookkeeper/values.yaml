@@ -5,7 +5,7 @@
 image:
   repository: pravega/bookkeeper
   pullPolicy: IfNotPresent
-  tag: 0.9.1
+  tag: 0.10.1
 
 hooks:
   image:
