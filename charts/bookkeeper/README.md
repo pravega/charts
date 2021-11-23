@@ -4,7 +4,7 @@ Here, we briefly describe how to [install](#installing-bookkeeper-cluster)/[upda
 
 ## Prerequisites
 
-- Kubernetes 1.15+ with Beta APIs
+- Kubernetes 1.16+ with Beta APIs
 - Helm 3+
 - An existing [Apache Zookeeper cluster](https://github.com/pravega/zookeeper-operator/blob/master/charts/zookeeper/README.md#installing-the-chart). This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator/tree/master/charts/zookeeper-operator#installing-the-chart)
 - [Bookkeeper Operator](../bookkeeper-operator/README.md#deploying-bookkeeper-operator)
@@ -113,7 +113,7 @@ API Version:      v1
 Event Time:       <nil>
 First Timestamp:  2020-04-27T16:53:34Z
 Involved Object:
-  API Version:   app.k8s.io/v1beta1
+  API Version:   app.k8s.io/v1
   Kind:          Application
   Name:          bookkeeper-cluster
   Namespace:     default
