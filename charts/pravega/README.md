@@ -4,7 +4,7 @@ Here, we briefly describe how to [install](#installing-pravega-cluster)/[update]
 
 ## Prerequisites
 
-  - Kubernetes 1.15+ with Beta APIs
+  - Kubernetes 1.16+ with Beta APIs
   - Helm 3.2.1+
   - An existing [Apache Zookeeper cluster](https://github.com/pravega/zookeeper-operator/blob/master/charts/zookeeper/README.md#installing-the-chart). This can be easily deployed using our [Zookeeper Operator](https://github.com/pravega/zookeeper-operator/tree/master/charts/zookeeper-operator#installing-the-chart)
   - An existing [Apache Bookkeeper cluster](../bookkeeper/README.md#deploying-bookkeeper). This can be easily deployed using our [BookKeeper Operator](../bookkeeper-operator/README.md#deploying-bookkeeper-operator)
@@ -24,8 +24,16 @@ where:
 
 - **[RELEASE_NAME]** is the release name for the pravega chart.
 - **[VERSION]** can be any stable release version for pravega from 0.5.0 onwards.
-- **[ZOOKEEPER_SVC]** is the name of client service of your Zookeeper deployment (e.g. `zookeeper-client:2181`). Multiple Zookeeper URIs can be specified, use a comma-separated list and DO NOT leave any spaces in between (e.g. `zookeeper-0:2181,zookeeper-1:2181,zookeeper-2:2181`).
-- **[BOOKKEEPER_SVC]** is the name of the headless service of your Bookkeeper deployment (e.g. `bookkeeper-bookie-0.bookkeeper-bookie-headless.default.svc.cluster.local:3181,bookkeeper-bookie-1.bookkeeper-bookie-headless.default.svc.cluster.local:3181,bookkeeper-bookie-2.bookkeeper-bookie-headless.default.svc.cluster.local:3181`).
+- **[ZOOKEEPER_SVC]** is the name of client service of your Zookeeper deployment (e.g. `zookeeper-client:2181`).  
+Single Zookeeper URI can be specified like this: `--set zookeeperUri=zookeeper-client:2181`.  
+Multiple Zookeeper URIs can be specified like this: `--set zookeeperUri="zookeeper-0.zookeeper-headless.default.svc.cluster.local:2181\,zookeeper-1.zookeeper-headless.default.svc.cluster.local:2181\,zookeeper-2.zookeeper-headless.default.svc.cluster.local:2181"`.  
+
+- **[BOOKKEEPER_SVC]** is the name of the headless service of your Bookkeeper deployment (e.g. `bookkeeper-bookie-headless:3181`).  
+Single Bookkeeper URI can be passed like this: `--set bookkeeperUri=bookkeeper-bookie-headless:3181`.  
+Multiple Bookkeeper URIs can be passed like this: `--set bookkeeperUri="bookkeeper-bookie-0.bookkeeper-bookie-headless.default.svc.cluster.local:3181\,bookkeeper-bookie-1.bookkeeper-bookie-headless.default.svc.cluster.local:3181\,bookkeeper-bookie-2.bookkeeper-bookie-headless.default.svc.cluster.local:3181"`.  
+
+>Note: In case of multiple URIs, a comma-separated list enclosed in double quotes is passed with no spaces in between escaping each `,` with `\`.  
+
 - **[TIER2_NAME]** is the longtermStorage `PersistentVolumeClaim` name (`pravega-tier2` if you created the PVC using the manifest provided).
 
 >Note:  You need to ensure that the [CLUSTER_NAME] is the same value as that provided in the [bookkeeper chart configuration](https://github.com/pravega/charts/blob/master/charts/bookkeeper/README.md#configuration),the default value for which is `pravega` and can be achieved by either providing the `[RELEASE_NAME] = pravega` or by providing `--set fullnameOverride=pravega` at the time of installing the pravega chart. On the contrary, the default value of [CLUSTER_NAME] in the bookkeeper charts can also be overridden by providing `--set pravegaClusterName=[CLUSTER_NAME]` at the time of installing the bookkeeper chart)
