@@ -1,4 +1,5 @@
 {{- if .Values.hooks.delete }}
+{{- $watchNamespace := .Values.watchNamespace }}
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -61,7 +62,12 @@ data:
     exit_code=0
     echo "Checking for PravegaCluster Resource"
 
-    ret=$(kubectl get PravegaCluster --all-namespaces --no-headers 2>&1)
+    {{- if $watchNamespace }}
+    cmd="kubectl get PravegaCluster -n {{ $watchNamespace }}"
+    {{- else }}
+    cmd="kubectl get PravegaCluster --all-namespaces"
+    {{- end }}
+    ret=`$cmd --no-headers 2>&1`
     if (echo $ret | grep -e "No resources found" -e "the server doesn't have a resource type \"PravegaCluster\"" > /dev/null);
     then
       echo "None"
