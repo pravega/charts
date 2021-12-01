@@ -6,14 +6,15 @@ metadata:
 spec:
   {{- if .Release.IsUpgrade }}
   conversion:
-    conversionReviewVersions: ["v1beta1", "v1alpha1"]
     strategy: Webhook
-    webhookClientConfig:
-      caBundle: {{ .Values.webhookCert.crt }}
-      service:
-        name: pravega-webhook-svc
-        namespace: {{ .Release.Namespace }}
-        path: /convert
+    webhook:
+      conversionReviewVersions: ["v1beta1", "v1alpha1"]
+      clientConfig:
+        caBundle: {{ .Values.webhookCert.crt }}
+        service:
+          name: pravega-webhook-svc
+          namespace: {{ .Release.Namespace }}
+          path: /convert
   {{- end }}
   group: pravega.pravega.io
   names:
