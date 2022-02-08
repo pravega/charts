@@ -79,6 +79,11 @@ we can also update other configurable parameters at run time. For changing optio
 ```
 helm upgrade bookkeeper charts/bookkeeper --set-string options."minorCompactionInterval=1900"
 ```
+> Note: By default the bookkeeper cluster chart sets post-install-upgrade-rollback hook backoffLimit to 10, which translates into 22 minute timeout before a helm upgrade is marked as failed.
+Taking into account that bookeeper upgrade would require at least two restarts per bookie pod, each of them taking three minutes, the best case for upgrade will take six minutes per bookie, resulting a four-replica BK cluster easily slipping  over the 22 minutes limit.
+Therefore if you are working with large replica, update the post-install-upgrade-rollback hook backoffLimit accordingly.
+For example, for an 84 bookie replicas in large-io-intensive manifest, we might be looking at 8+ hour upgrade with as many as 100 retries.
+
 Please refer [upgrade](https://github.com/pravega/bookkeeper-operator/blob/master/doc/upgrade-cluster.md) for upgrading cluster versions.
 
 ## Uninstalling the Bookkeeper cluster
