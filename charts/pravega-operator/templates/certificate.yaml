@@ -1,5 +1,5 @@
 {{- if .Values.webhookCert.generate }}
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: {{ template "pravega-operator.fullname" . }}-issuer
@@ -12,7 +12,7 @@ spec:
 {{- end }}
 ---
 {{- if .Values.webhookCert.generate }}
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: {{ template "pravega-operator.fullname" . }}-cert
