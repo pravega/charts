@@ -95,6 +95,10 @@ spec:
     controllerInitContainers:
 {{ toYaml .Values.controller.initContainers | indent 6 }}
     {{- end }}
+    {{- if .Values.controller.tolerations }}
+    controllerPodTolerations:
+{{ toYaml .Values.controller.tolerations | indent 6 }}
+    {{- end }}
     {{- if .Values.segmentStore.labels }}
     segmentStorePodLabels:
 {{ toYaml .Values.segmentStore.labels | indent 6 }}
@@ -106,6 +110,10 @@ spec:
     {{- if .Values.segmentStore.initContainers }}
     segmentStoreInitContainers:
 {{ toYaml .Values.segmentStore.initContainers | indent 6 }}
+    {{- end }}
+    {{- if .Values.segmentStore.tolerations }}
+    segmentStorePodTolerations:
+{{ toYaml .Values.segmentStore.tolerations | indent 6 }}
     {{- end }}
     image:
       repository: {{ .Values.image.repository }}

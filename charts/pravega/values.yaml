@@ -65,6 +65,7 @@ controller:
   labels: {}
   annotations: {}
   initContainers: []
+  tolerations: []
   probes: {}
   # readiness:
   #   initialDelaySeconds: 20
@@ -109,6 +110,7 @@ segmentStore:
   stsNameSuffix:
   headlessSvcNameSuffix:
   initContainers: []
+  tolerations: []
   probes: {}
   # readiness:
   #   initialDelaySeconds: 10

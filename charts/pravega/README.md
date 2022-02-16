@@ -150,6 +150,7 @@ The following table lists the configurable parameters of the pravega chart and t
 | `controller.jvmOptions` | JVM Options for controller | `["-Xms512m", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]` |
 | `controller.svcNameSuffix` | suffix for controller service name | `pravega-controller` |
 | `controller.initContainers` | Init Containers to add to controller pods | `[]` |
+| `controller.tolerations` | Tolerations to add to controller pods | `[]` |
 | `controller.probes.readiness.initialDelaySeconds` | Number of seconds after the container has started before readiness probe is initiated | `20` |
 | `controller.probes.readiness.periodSeconds` | Number of seconds after which a container running within a pod will be probed | `10` |
 | `controller.probes.readiness.failureThreshold` | Minimum number of consecutive failures for the readiness probe to be considered failed | `3` |
@@ -180,6 +181,7 @@ The following table lists the configurable parameters of the pravega chart and t
 | `segmentStore.labels` | Labels to add to the segmentStore pods | `{}` |
 | `segmentStore.annotations` | Annotations to add to the segmentStore pods | `{}` |
 | `segmentStore.initContainers` | Init Containers to add to the segmentStore pods | `[]` |
+| `segmentStore.tolerations` | Tolerations to add to the segmentStore pods | `[]` |
 | `segmentStore.probes.readiness.initialDelaySeconds` | Number of seconds after the container has started before readiness probe is initiated | `10` |
 | `segmentStore.probes.readiness.periodSeconds` | Number of seconds after which a container running within a pod will be probed | `10` |
 | `segmentStore.probes.readiness.failureThreshold` | Minimum number of consecutive failures for the readiness probe to be considered failed | `30` |
