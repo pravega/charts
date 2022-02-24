@@ -7,6 +7,10 @@ image:
   tag: 0.5.6
   pullPolicy: IfNotPresent
 
+securityContext: {}
+#  runAsUser: 1001
+#  runAsGroup: 1001
+
 ## Install RBAC roles and bindings.
 rbac:
   create: true
@@ -57,9 +61,6 @@ hooks:
   image:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.23.2
-  securityContext: {}
-  #  runAsUser: 1001
-  #  runAsGroup: 1001
 
   ## Whether to create pre-delete hook which ensures that
   ## the operator cannot be deleted till the pravega cluster

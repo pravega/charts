@@ -22,6 +22,10 @@ spec:
       - name: {{ template "pravega-operator.fullname" . }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+        {{- if .Values.securityContext }}
+        securityContext:
+{{ toYaml .Values.securityContext | indent 10 }}
+       {{- end }}
         ports:
         - containerPort: 6000
           name: metrics

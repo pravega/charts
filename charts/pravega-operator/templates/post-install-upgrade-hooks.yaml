@@ -94,9 +94,9 @@ spec:
       containers:
       - name: post-install-upgrade-job
         image: "{{ .Values.hooks.image.repository }}:{{ .Values.hooks.image.tag }}"
-        {{- if .Values.hooks.securityContext }}
+        {{- if .Values.securityContext }}
         securityContext:
-{{ toYaml .Values.hooks.securityContext | indent 10 }}
+{{ toYaml .Values.securityContext | indent 10 }}
         {{- end }}
         command:
           - /scripts/validations.sh
