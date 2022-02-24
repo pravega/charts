@@ -103,9 +103,9 @@ spec:
       containers:
         - name: pre-delete-job
           image: "{{ .Values.hooks.image.repository }}:{{ .Values.hooks.image.tag }}"
-          {{- if .Values.securityContext }}
+          {{- if .Values.hooks.securityContext }}
           securityContext:
-{{ toYaml .Values.securityContext | indent 12 }}
+{{ toYaml .Values.hooks.securityContext | indent 12 }}
           {{- end }}
           command:
             - /scripts/pre-delete.sh

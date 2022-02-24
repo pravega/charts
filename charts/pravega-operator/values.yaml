@@ -67,4 +67,8 @@ hooks:
   ## custom resources have been cleaned up
   delete: true
 
+  securityContext: {}
+  #  runAsUser: 1001
+  #  runAsGroup: 1001
+
 disableFinalizer: false
