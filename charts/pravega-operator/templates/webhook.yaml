@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 443
     protocol: TCP
-    targetPort: 443
+    targetPort: 9443
   selector:
     component: pravega-operator
   sessionAffinity: None
@@ -48,5 +48,5 @@ webhooks:
     - pravegaclusters
     scope: "*"
   admissionReviewVersions: ["v1beta1", "v1"]
-  sideEffects: None  
+  sideEffects: None
   timeoutSeconds: 30
