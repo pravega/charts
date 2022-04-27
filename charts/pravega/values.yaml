@@ -188,6 +188,7 @@ options:
   bookkeeper.ack.quorum.size: "3"
   bookkeeper.write.timeout.milliseconds: "60000"
   bookkeeper.write.outstanding.bytes.max: "33554432"
+  bookkeeper.ledger.size.max: "268435456"
   pravegaservice.cache.size.max: "1610612736"
   pravegaservice.cache.time.seconds.max: "600"
   pravegaservice.service.listener.port: "12345"

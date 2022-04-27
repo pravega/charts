@@ -24,4 +24,5 @@ options:
   bookkeeper.ack.quorum.size: "1"
   bookkeeper.write.quorum.size: "1"
   bookkeeper.ensemble.size: "1"
+  bookkeeper.ledger.size.max: "268435456"
   pravegaservice.cache.size.max: "402653184"
