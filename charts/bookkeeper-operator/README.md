@@ -6,7 +6,7 @@ Here, we briefly describe how to install [Bookkeeper Operator](https://github.co
   - Kubernetes 1.16+ with Beta APIs
   - Helm 3.2.1+
   - Cert-Manager v1.0+ or some other certificate management solution in order to manage the webhook service certificates. This can be easily deployed by referring to [this](https://cert-manager.io/docs/installation/kubernetes/)
-  - An Issuer and a Certificate (either self-signed or CA signed) in the same namespace that the Bookkeeper Operator will be installed (refer to [this](https://github.com/pravega/bookkeeper-operator/blob/master/deploy/certificate.yaml) manifest to create a self-signed certificate in the default namespace)
+  - An Issuer and a Certificate (either self-signed or CA signed) in the same namespace that the Bookkeeper Operator will be installed (refer to [this](https://github.com/pravega/bookkeeper-operator/blob/master/config/certmanager/certificate.yaml) manifest to create a self-signed certificate in the default namespace)
 
 ## Installing Bookkeeper-Operator
 
