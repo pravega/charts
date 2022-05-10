@@ -32,7 +32,7 @@ externalAccess:
 image:
   repository: pravega/pravega
   pullPolicy: IfNotPresent
-  tag: 0.10.1
+  tag: 0.10.2
 
 hooks:
   image:
