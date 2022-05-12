@@ -44,6 +44,10 @@ spec:
   initContainers:
 {{ toYaml .Values.initContainers | indent 4 }}
   {{- end }}
+  {{- if .Values.tolerations }}
+  tolerations:
+{{ toYaml .Values.tolerations | indent 4 }}
+  {{- end }}
   {{- if .Values.headlessSvcNameSuffix }}
   headlessSvcNameSuffix: {{ .Values.headlessSvcNameSuffix }}
   {{- end }}
