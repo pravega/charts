@@ -27,6 +27,7 @@ affinity: {}
 labels: {}
 annotations: {}
 initContainers: []
+tolerations: []
 headlessSvcNameSuffix:
 probes:
   readiness:
