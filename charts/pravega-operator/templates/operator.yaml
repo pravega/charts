@@ -51,8 +51,6 @@ spec:
         - name: webhook-cert
           mountPath: "/tmp/k8s-webhook-server/serving-certs"
           readOnly: true
-        - name: versions-volume
-          mountPath: "/tmp/config"
       volumes:
       - name: webhook-cert
         secret:
@@ -61,6 +59,3 @@ spec:
           {{- else }}
           secretName: {{ .Values.webhookCert.secretName }}
           {{- end }}
-      - name: versions-volume
-        configMap:
-          name: supported-versions-map
