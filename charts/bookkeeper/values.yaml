@@ -18,6 +18,7 @@ hooks:
 
 replicas: 3
 maxUnavailableReplicas:
+upgradeTimeout:
 zookeeperUri: zookeeper-client:2181
 pravegaClusterName: pravega
 autoRecovery: true
