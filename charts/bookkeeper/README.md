@@ -152,6 +152,7 @@ The following table lists the configurable parameters of the Bookkeeper chart an
 | `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `replicas` | Number of bookkeeper replicas | `3` |
 | `maxUnavailableReplicas` | Maximum number of unavailable replicas for bookkeeper PDB | |
+| `upgradeTimeout` | Timeout value for upgrade/rollback in minutes | |
 | `zookeeperUri` | Zookeeper client service URI | `zookeeper-client:2181` |
 | `pravegaClusterName` | Name of the pravega cluster | `pravega` |
 | `autoRecovery`| Enable bookkeeper auto-recovery | `true` |
