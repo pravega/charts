@@ -80,7 +80,7 @@ spec:
     {{- end }}
     {{- if .Values.segmentStore.service.annotations }}
     segmentStoreSvcAnnotations:
-  {{ toYaml .Values.segmentStore.service.annotations | indent 6 }}
+{{ toYaml .Values.segmentStore.service.annotations | indent 6 }}
     {{- end }}
     {{- end }}
     {{- if .Values.controller.labels }}
