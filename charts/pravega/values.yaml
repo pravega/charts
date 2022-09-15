@@ -91,6 +91,9 @@ segmentStore:
     # name:
     # path:
   env:
+  containerEnv: {}
+  containers: {}
+  additionalVolumes: {}
   resources:
     requests:
       cpu: 1000m

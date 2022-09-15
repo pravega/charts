@@ -147,6 +147,18 @@ spec:
     segmentStoreResources:
 {{ toYaml .Values.segmentStore.resources | indent 6 }}
     {{- end }}
+    {{- if .Values.segmentStore.containerEnv }}
+    segmentStoreContainerEnv:
+{{ toYaml .Values.segmentStore.containerEnv | indent 6 }}
+    {{- end }}
+    {{- if .Values.segmentStore.containers }}
+    segmentStoreContainers:
+{{ toYaml .Values.segmentStore.containers | indent 6 }}
+    {{- end }}
+    {{- if .Values.segmentStore.additionalVolumes }}
+    segmentStoreAdditionalVolumes:
+{{ toYaml .Values.segmentStore.additionalVolumes | indent 6 }}
+    {{- end }}
     {{- if .Values.segmentStore.env }}
     segmentStoreEnvVars: {{ .Values.segmentStore.env }}
     {{- end }}
