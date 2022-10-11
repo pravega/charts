@@ -119,7 +119,7 @@ The following table lists the configurable parameters of the pravega chart and t
 
 | Parameter | Description | Default |
 | ----- | ----------- | ------ |
-| `image.tag` | `Version of Pravega image` | `0.11.0` |
+| `image.tag` | `Version of Pravega image` | `0.12.0` |
 | `image.repository` | Image repository | `pravega/pravega` |
 | `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `tls` | Pravega security configuration passed to the Pravega processes | `{}` |
