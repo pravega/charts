@@ -33,10 +33,10 @@ headlessSvcNameSuffix:
 probes:
   readiness:
     initialDelaySeconds: 20
-    periodSeconds: 10
+    periodSeconds: 20
     failureThreshold: 9
     successThreshold: 1
-    timeoutSeconds: 5
+    timeoutSeconds: 10
   liveness:
     initialDelaySeconds: 60
     periodSeconds: 15
