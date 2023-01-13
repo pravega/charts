@@ -49,6 +49,7 @@ debugLogging: false
 controller:
   replicas: 1
   maxUnavailableReplicas:
+  envVars: {}
   svcNameSuffix:
   resources:
     requests:
