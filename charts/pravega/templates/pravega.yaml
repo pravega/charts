@@ -162,6 +162,10 @@ spec:
     {{- if .Values.segmentStore.env }}
     segmentStoreEnvVars: {{ .Values.segmentStore.env }}
     {{- end }}
+    {{- if .Values.controller.envVars }}
+    controllerEnvVars:
+{{ toYaml .Values.controller.envVars | indent 6 }}
+    {{- end }}
     {{- if .Values.segmentStore.secret }}
     segmentStoreSecret:
       secret: {{ .Values.segmentStore.secret.name }}
