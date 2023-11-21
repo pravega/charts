@@ -7,7 +7,8 @@ tls: {}
   #   controller: "controller-pki"
   #   segmentStore: "segmentstore-pki"
   # caBundle: ""
-
+reservedPortList: []
+# - 10010  
 authentication:
   enabled: false
   ## passwordAuthSecret is ignored if authentication is disabled
@@ -24,19 +25,19 @@ zookeeperUri: zookeeper-client:2181
 bookkeeperUri: bookkeeper-bookie-headless:3181
 
 externalAccess:
-  enabled: false
+  enabled: true 
   ## type and domainName are ignored if external access is disabled
   type: LoadBalancer
   domainName:
 
 image:
-  repository: pravega/pravega
+  repository: devops-repo.isus.emc.com:8116/nautilus/pravega
   pullPolicy: IfNotPresent
-  tag: 0.12.0
+  tag: 0.14.0-3267.e16f0c25d 
 
 hooks:
   image:
-    repository: lachlanevenson/k8s-kubectl
+    repository: devops-repo.isus.emc.com:8116/nautilus/k8s-kubectl
     tag: v1.23.2
   securityContext: {}
   #  runAsUser: 1001
@@ -86,7 +87,7 @@ controller:
   #   timeoutSeconds: 5
 
 segmentStore:
-  replicas: 1
+  replicas: 13 
   maxUnavailableReplicas:
   secret: {}
     # name:
@@ -110,8 +111,8 @@ segmentStore:
     ## used to override the service type for segmentStore
     type:
     annotations: {}
-    loadBalancerIP:
-    externalTrafficPolicy:
+    loadBalancerIP: 127.0.0.1
+    externalTrafficPolicy: cluster
   jvmOptions: ["-Xms1g", "-Xmx1g", "-XX:MaxDirectMemorySize=2560m", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
   labels: {}
   annotations: {}
