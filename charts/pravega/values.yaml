@@ -25,19 +25,19 @@ zookeeperUri: zookeeper-client:2181
 bookkeeperUri: bookkeeper-bookie-headless:3181
 
 externalAccess:
-  enabled: true 
+  enabled: false
   ## type and domainName are ignored if external access is disabled
   type: LoadBalancer
   domainName:
 
 image:
-  repository: devops-repo.isus.emc.com:8116/nautilus/pravega
+  repository: pravega/pravega
   pullPolicy: IfNotPresent
-  tag: 0.14.0-3267.e16f0c25d 
+  tag: 0.12.0
 
 hooks:
   image:
-    repository: devops-repo.isus.emc.com:8116/nautilus/k8s-kubectl
+    repository: lachlanevenson/k8s-kubectl
     tag: v1.23.2
   securityContext: {}
   #  runAsUser: 1001
@@ -87,7 +87,7 @@ controller:
   #   timeoutSeconds: 5
 
 segmentStore:
-  replicas: 13 
+  replicas: 1
   maxUnavailableReplicas:
   secret: {}
     # name:
@@ -111,8 +111,8 @@ segmentStore:
     ## used to override the service type for segmentStore
     type:
     annotations: {}
-    loadBalancerIP: 127.0.0.1
-    externalTrafficPolicy: cluster
+    loadBalancerIP:
+    externalTrafficPolicy:
   jvmOptions: ["-Xms1g", "-Xmx1g", "-XX:MaxDirectMemorySize=2560m", "-XX:+ExitOnOutOfMemoryError", "-XX:+CrashOnOutOfMemoryError", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/tmp/dumpfile/heap", "-XX:MaxRAMPercentage=50.0", "-XX:+UseContainerSupport", "-XX:+PrintExtendedThreadInfo"]
   labels: {}
   annotations: {}
