@@ -7,7 +7,8 @@ tls: {}
   #   controller: "controller-pki"
   #   segmentStore: "segmentstore-pki"
   # caBundle: ""
-
+reservedPortList: []
+# - 10010  
 authentication:
   enabled: false
   ## passwordAuthSecret is ignored if authentication is disabled

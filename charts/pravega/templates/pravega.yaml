@@ -20,6 +20,10 @@ spec:
       caBundle: {{ .Values.tls.caBundle }}
       {{- end }}
   {{- end }}
+  {{- if .Values.reservedPortList }}
+  reservedPortList:
+{{ toYaml .Values.reservedPortList | indent 2 }}
+  {{- end }}
   authentication:
     enabled: {{ .Values.authentication.enabled }}
     {{- if .Values.authentication.enabled }}
