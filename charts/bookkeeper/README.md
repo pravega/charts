@@ -147,7 +147,7 @@ The following table lists the configurable parameters of the Bookkeeper chart an
 
 | Parameter | Description | Default |
 | ----- | ----------- | ------ |
-| `image.tag` | Image tag | `0.12.0` |
+| `image.tag` | Image tag | `0.13.0` |
 | `image.repository` | Image repository | `pravega/bookkeeper` |
 | `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `replicas` | Number of bookkeeper replicas | `3` |
